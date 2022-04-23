@@ -213,7 +213,7 @@
 /****************************************/
 /*** Case Studies Desktop ***************/
 /****************************************/
-.csd__outer {
+.cstud__outer {
     position: relative;
     z-index: 0;
     margin-top: 8em;
@@ -222,7 +222,7 @@
     background-color: white;
 }
 
-.csd__filler {
+.cstud__filler {
     position: absolute;
     z-index: -1;
     left: 0;
@@ -232,7 +232,7 @@
     background-color: var(--background-blue);
 }
 
-.csd__diagnol {
+.cstud__diagnol {
     position: absolute;
     z-index: -1;
     top: 0;
@@ -241,7 +241,7 @@
     border-bottom: var(--section-height) solid white;
 }
 
-.csd__inner {
+.cstud__inner {
     max-width: var(--max-width);
     margin-inline: auto;
     padding: 2em;
@@ -252,7 +252,7 @@
     justify-content: space-between;
 }
 
-.csd__body {
+.cstud__body {
     width: 37%;
     margin-right: 13%;
 
@@ -262,20 +262,16 @@
     padding: 0 2em;
 }
 
-.csd__title,
-.csd__desc {
+.cstud__title,
+.cstud__desc {
     color: white;
 }
 
-.csd__title {
+.cstud__title {
     margin-bottom: 0;
 }
 
-.csd__btn {
-    text-align: center;
-}
-
-.csd__carousel {
+.cstud__carousel {
     width: 50%;
 
     display: flex;
@@ -283,11 +279,17 @@
     justify-content: space-around;
 }
 
-.csd__carousel-item {
-    object-fit: contain;
-    height: calc(var(--section-height) - 20%);
+.cstud__item {
+    color: black;
+    position: relative;
     display: none;
-
+    flex-shrink: 0;
+    width: 200px;
+    height: 400px;
+    background-image: url(../images/phone.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     animation: fadeVisibility 0.5s;
 }
 
@@ -300,8 +302,8 @@
     }
 }
 
-.csd__prev,
-.csd__next {
+.cstud__prev,
+.cstud__next {
     width: 0;
     height: 0;
     border-top: 20px solid transparent;
@@ -309,20 +311,58 @@
     cursor: pointer;
 }
 
-.csd__prev {
+.cstud__prev {
     border-right: 25px solid var(--background-blue);
 }
 
-.csd__next {
+.cstud__next {
     border-left: 25px solid var(--background-blue);
 }
 
-.csd__prev:hover{
+.cstud__prev:hover{
     border-right: 25px solid #005cc5;
 }
 
-.csd__next:hover{
+.cstud__next:hover{
     border-left: 25px solid #005cc5;
+}
+
+.cstud__person,
+.cstud__subscribers,
+.cstud__views,
+.cstud__leads {
+    position: absolute;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    width: fit-content;
+    text-align: center;
+}
+
+.cstud__person {
+    font-size: 0.8rem;
+    width: max-content;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 7.5%;
+}
+
+.cstud__subscribers {
+    top: 27.25%;
+    left: 14.75%;
+}
+
+.cstud__views {
+    top: 27.25%;
+    right: 22%;
+}
+
+.cstud__leads {
+    font-size: 1.5rem;
+    font-weight: 700;
+    bottom: 32.5%;
+    left: 37%;
 }
 
 .visible {

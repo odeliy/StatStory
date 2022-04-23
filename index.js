@@ -12,13 +12,10 @@ hamburger.addEventListener("click", () => {
 /*** Horizontal scroll Center *****/
 /**********************************/
 /* 1. center horizontal scroll section */
-document.getElementById("scrollCenter1").scrollIntoView({
+document.getElementById("scrollCenter").scrollIntoView({
     inline: "center"
 })
 
-document.getElementById("scrollCenter2").scrollIntoView({
-    inline: "center"
-})
 /* 2. reset browser to top of page */
 document.getElementById("header").scrollIntoView({
     block: "start"
@@ -28,7 +25,7 @@ document.getElementById("header").scrollIntoView({
 /**********************************/
 /*** Carousel *********************/
 /**********************************/
-const slides = document.getElementsByClassName("csd__carousel-item")
+const slides = document.getElementsByClassName("cstud__item")
 const totalSlides = slides.length
 let slidePosition = 0
 

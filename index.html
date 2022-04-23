@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StatStory</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/style.css">
+    <link rel="stylesheet" href="./resources/css/index.css">
+    <link rel="stylesheet" href="./resources/css/responsive.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header contain" id="header">
+        <img class="logo" src="./resources/images/logo.png" alt="" />
+        <img class="hamburger" src="./resources/images/hamburger.svg" alt="" />
+        <nav class="nav mobile-hidden">
+            <a class="nav__item nav__item--current" href="#">Home</a>
+            <a class="nav__item" href="#">Case Studies</a>
+            <a class="nav__item" href="#">Pricing</a>
+            <a class="nav__item" href="#">About Us</a>
+            <a class="nav__item" href="#">Blog</a>
+            <a class="nav__item" href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <div class="hero contain">
+        <div class="hero__body">
+            <h1 class="hero__title">StatStory</h1>
+            <p class="hero__desc">Our goal is to help businesses grow their YouTube channels, increase brand awareness, & generate leads with targeted YouTube Ad Campaigns.</p>
+            <p class="hero__desc">We know every business is unique. Our ad campaigns are built from the groud up to match your exact needs.</p>
+            <a class="btn hero__btn" href="#">Learn More</a>
+        </div>
+        <img class="hero__img" src="./resources/images/hero.png"/>
+    </div>
+    
+    <h2 class="trusted-title">Trusted by</h2>
+    <div class="blue-body-background"> <!-- blue body starts here -->
+        
+        <!-- Trusted -->
+        <div class="trusted contain">
+            <div class="trusted__panel" id="panel-center">
+                <div class="trusted__icon trusted__icon--main">
+                    <img class="trusted__img" src="./resources/images/pat-lotz.png">
+                </div>
+                <p class="trusted__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sequi animi, assumenda iste ducimus incidunt molestiae adipisicing elit. Sit amet consectetur adipisicing.</p>
+            </div>
+
+            <div class="trusted__panel" id="panel-left">
+                <div class="trusted__icon trusted__icon--circle">
+                    <img class="trusted__img--circle" src="./resources/images/fishing-podcast.png">
+                </div>
+                <p class="trusted__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="trusted__panel" id="panel-right">
+                <div class="trusted__icon trusted__icon--circle">
+                    <img class="trusted__img--circle" src="./resources/images/fishing-podcast.png">
+                </div>
+                <p class="trusted__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <a class="btn trusted__btn" href="#">Don't click me</a>
+
+        <!-- Testimonials -->
+        <div class="testimonials__outer">
+            <div class="testimonials__inner" id="scrollDiv">
+                <div class="testimonial__overlay"></div>
+
+                <!-- 
+                    Important! Whichever div with the id tag of scrollCenter
+                    will be the middle point of the horizontal scroll.
+
+                    For an even number of testimonials, setup a empty div in
+                    the middle with the id (like below)
+
+                    For an odd number of testimonials, comment out empty div
+                    and place the id tag on the middle testimonial card
+                -->
+                <div class="testimonial__card">
+                    <div class="testimonial__card-left">
+                        <div class="testimonial__img-holder">
+                            <img class=""class=testimonial__img"" src="" alt="">
+                        </div>
+                        <p class="testimonial__giver">John K.</p>
+                        <p class="testimonial__job">Entrepreneur</p>
+                    </div>
+                    <div class="testimonial__card-right">
+                        <div class="testimonial__star-review">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                        </div>
+                        <p class="testimonial__review">I've been struggling for years with analytics management. StatStory has been a game changer.</p>
+                    </div>
+                </div>
+    
+                <div class="testimonial__card">
+                    <div class="testimonial__card-left">
+                        <div class="testimonial__img-holder">
+                            <img class=testimonial__img"" src="" alt="">
+                        </div>
+                        <p class="testimonial__giver">Kelly J.</p>
+                        <p class="testimonial__job">Brand Consultant</p>
+                    </div>
+                    <div class="testimonial__card-right">
+                        <div class="testimonial__star-review">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                        </div>
+                        <p class="testimonial__review">I recommend this service to all of my clients. It provides a clear correlation between action and audience response.</p>
+                    </div>
+                </div>
+
+                <!-- HORIZONTAL SCROLL ANCHOR POINT -->
+                <div id="scrollCenter1"></div>
+
+
+                <div class="testimonial__card">
+                    <div class="testimonial__card-left">
+                        <div class="testimonial__img-holder">
+                            <img class=testimonial__img"" src="" alt="">
+                        </div>
+                        <p class="testimonial__giver">B.J. Ellison</p>
+                        <p class="testimonial__job">YouTuber</p>
+                    </div>
+                    <div class="testimonial__card-right">
+                        <div class="testimonial__star-review">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                        </div>
+                        <p class="testimonial__review">Far better than the built-in youtube analytics tools. Legit service!</p>
+                    </div>
+                </div>
+    
+                <div class="testimonial__card">
+                    <div class="testimonial__card-left">
+                        <div class="testimonial__img-holder">
+                            <img class=testimonial__img"" src="" alt="">
+                        </div>
+                        <p class="testimonial__giver">B.J. Ellison</p>
+                        <p class="testimonial__job">YouTuber</p>
+                    </div>
+                    <div class="testimonial__card-right">
+                        <div class="testimonial__star-review">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
+                        </div>
+                        <p class="testimonial__review">Far better than the built-in youtube analytics tools. Legit service!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- Case Studies -- Desktop Only-->
+        <div class="csd__outer mobile-hidden">
+            <div class="csd__filler mobile-hidden"></div>
+            <div class="csd__diagnol mobile-hidden"></div>
+
+            <div class="csd__inner">
+                <div class="csd__body">
+                    <h2 class="csd__title">Case Studies</h2>
+                    <p class="csd__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam fugiat fugit sequi nam exercitationem laboriosam, nobis odit molestiae quas ipsam animi qui assumenda quo adipisci ipsum doloremque obcaecati ad error.</p>
+                    <a class="btn csd__btn" href="#">Learn More</a>
+                </div>
+                <div class="csd__carousel">
+                    <div class="csd__prev" id="prev"></div>
+                    <img class="csd__carousel-item visible" src="./resources/images/case-study.png">
+                    <img class="csd__carousel-item" src="./resources/images/case-study2.png">
+                    <img class="csd__carousel-item" src="./resources/images/case-study3.png">
+                    <div class="csd__next" id="next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Studies -- Mobile Only-->
+        <div class="csm desktop-hidden">
+            <h2 class="csm__title">Case Studies</h2>
+            <a class="btn csm__btn" href="#">Learn More</a>
+            <div class="csm__container">
+                <!-- <img class="csm__img" src="./resources/images/case-study.png"> -->
+                <!-- <img class="csm__img" id="scrollCenter2" src="./resources/images/case-study2.png"> -->
+                <!-- <img class="csm__img" src="./resources/images/case-study3.png"> -->
+                <div class="csm__item">
+                    <span class="csm__person">Penny Kervill | Realtor</span>
+                    <span class="csm__subscribers">204%</span>
+                    <span class="csm__views">451%</span>
+                    <span class="csm__leads">3X</span>
+                </div>
+
+                <div class="csm__item" id="scrollCenter2">
+                    <span class="csm__person">Jane Smith | Occupation</span>
+                    <span class="csm__subscribers">300%</span>
+                    <span class="csm__views">260%</span>
+                    <span class="csm__leads">2X</span>
+                </div>
+
+                <div class="csm__item">
+                    <span class="csm__person">Kim Smithson | Spa Repair</span>
+                    <span class="csm__subscribers">980%</span>
+                    <span class="csm__views">50%</span>
+                    <span class="csm__leads">9X</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Free Ads -->
+        <div class="free-ads">
+            <h2 class="free-ads__title">Want $75 in free ads?</h2>
+            <input class="free-ads__input" type="text" placeholder="Enter your email to learn how">
+            <a class="btn free-ads__btn" href="#">Submit</a>
+        </div>
+
+    </div> <!-- blue body ends here -->
+
+    <footer class="footer-frame">
+        <div class="footer contain">
+            <div class="footer__info">
+                <img class="footer__logo" src="./resources/images/footer-logo.png" alt="">
+                <p class="footer__business-info">Business info</p>
+            </div>
+            <div class="footer__social">
+                <ul class="footer__list">
+                    <li><a class="footer__link"href="#">social media links</a></li>
+                    <li><a class="footer__link"href="#">social media links</a></li>
+                    <li><a class="footer__link"href="#">social media links</a></li>
+                </ul>
+            </div>
+            <div class="footer__misc">
+                <ul class="footer__list">
+                    <li><a class="footer__link"href="#">footer links</a></li>
+                    <li><a class="footer__link"href="#">footer links</a></li>
+                    <li><a class="footer__link"href="#">footer links</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="./index.js"></script>
+</body>
+</html>

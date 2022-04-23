@@ -1,0 +1,222 @@
+/*******************************/
+/*** Big Screens Only **********/
+/*******************************/
+@media (min-width: 851px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav {
+        position: unset;
+        flex-direction: unset;
+        transform: unset;
+        width: unset;
+        box-shadow: unset;
+    }
+
+    .nav__item + .nav__item {
+        margin-left: 2em;
+    }
+
+    .nav__item:hover,
+    .nav__item:focus {
+        text-decoration: underline;
+    }
+
+    #panel-left {order: -1;}
+    #panel-center {order: 0;}
+    #panel-right {order: 1;}
+
+    .desktop-hidden {
+        display: none;
+    }
+
+    .testimonials__inner {
+        overflow-x: hidden;
+    }
+
+    .testimonials__inner:hover {
+        overflow-x: scroll;
+    }
+}
+
+/*******************************/
+/*** Small Screens Only ********/
+/*******************************/
+@media (max-width: 850px) {
+    .mobile-hidden {
+        display: none;
+    }
+
+    /*** Header ***/
+    .logo {
+        width: 35px;
+    }
+
+    /*** Hero ***/
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero__body {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .hero__img {
+        width: 100%;
+        max-width: 700px;
+        order: -1;
+    }
+
+    .hero__title {
+        margin-bottom: 0.25em;
+    }
+
+    /*** Trusted By ***/
+    .trusted {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trusted__panel {
+        margin-top: unset;
+        margin-bottom: 2em;
+        max-width: 700px;
+    }
+
+    #panel-center {
+        margin-top: -50px;
+    }
+
+    .trusted__desc {
+        margin-top: 1em;
+    }
+
+    /*** Testimonials ***/
+    .testimonials__inner {
+        -webkit-overflow-scrolling: touch;
+        overflow-x: scroll;
+    }
+
+    /*** Free Ads ***/
+    .free-ads {
+        width: 80%;
+        min-height: unset;
+    }
+
+    .free-ads__input {
+        font-size: 1.2rem;
+    }
+
+    .free-ads__btn {
+        margin-bottom: 4em;
+    }
+}
+
+@media (max-width: 750px) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer__list {
+        line-height: 2.5em;
+    }
+}
+
+/*******************************/
+/*** Case Studies Mobile *******/
+/*******************************/
+@media (min-width: 750px) {
+    .csm__container {justify-content: space-evenly;}
+}
+
+
+@media (max-width: 850px) {
+    .csm {
+        width: 100%;
+        margin-top: 4em;
+        background-color: white;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .csm__title {
+        color: black;
+        text-align: center;
+    }
+
+    .csm__btn {
+        background-color: var(--background-blue);
+        color: white;
+        margin: 2em 0;
+
+        order: 99;
+    }
+
+    .csm__container {
+        width: 100%;
+        display: flex;
+        gap: 10%;
+
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+
+    .csm__item {
+        position: relative;
+        flex-shrink: 0;
+        width: 200px;
+        height: 400px;
+        background-image: url(../images/phone.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .csm__person,
+    .csm__subscribers,
+    .csm__views,
+    .csm__leads {
+        position: absolute;
+        font-size: .9rem;
+        font-weight: 600;
+        font-family: 'Nunito', sans-serif;
+        width: fit-content;
+        text-align: center;
+    }
+
+    .csm__person {
+        width: max-content;
+        color: white;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 7.5%;
+    }
+
+    .csm__subscribers {
+        top: 27.25%;
+        left: 14.5%;
+    }
+
+    .csm__views {
+        top: 27.25%;
+        right: 22%;
+    }
+
+    .csm__leads {
+        font-size: 1.5rem;
+        font-weight: 700;
+        bottom: 32.5%;
+        left: 37%;
+    }
+    
+    /* .csm__img {
+        object-fit: contain;
+        flex-shrink: 0;
+        max-height: 66vh;
+    } */
+}

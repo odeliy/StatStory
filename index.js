@@ -7,61 +7,60 @@ hamburger.addEventListener("click", () => {
     hamburger.nextElementSibling.classList.toggle("mobile-hidden")
 })
 
-
 /**********************************/
-/*** Horizontal scroll Center *****/
+/*** Case Studies Carousel ********/
 /**********************************/
-/* 1. center horizontal scroll section */
-document.getElementById("scrollCenter").scrollIntoView({
-    inline: "center"
-})
-
-/* 2. reset browser to top of page */
-document.getElementById("header").scrollIntoView({
-    block: "start"
-})
-
-
-/**********************************/
-/*** Carousel *********************/
-/**********************************/
-const slides = document.getElementsByClassName("cstud__item")
-const totalSlides = slides.length
-let slidePosition = 0
-
 document.getElementById("prev").addEventListener("click", () => {
-    moveToPrevSlide()
+    moveToPrevCaseStudy(caseStudies)
 })
 document.getElementById("next").addEventListener("click", () => {
-    moveToNextSlide()
+    moveToNextCaseStudy(caseStudies)
 })
 
-function hideAllSlides() {
+const caseStudies = document.getElementsByClassName("cstud__item")
+const caseStudiesTotal = caseStudies.length
+let caseStudiesPosition = 0
+
+function hideAllSlides(slides) {
     for (let slide of slides) {
         slide.classList.remove("visible")
     }
 }
 
-function moveToNextSlide() {
-    hideAllSlides()
+function moveToNextCaseStudy(slides) {
+    hideAllSlides(slides)
 
-    if (slidePosition === totalSlides - 1) {
-        slidePosition = 0
+    if (caseStudiesPosition === caseStudiesTotal - 1) {
+        caseStudiesPosition = 0
     } else {
-        slidePosition++
+        caseStudiesPosition++
     }
 
-    slides[slidePosition].classList.add("visible")
+    caseStudies[caseStudiesPosition].classList.add("visible")
 }
 
-function moveToPrevSlide() {
-    hideAllSlides()
+function moveToPrevCaseStudy(slides) {
+    hideAllSlides(slides)
 
-    if (slidePosition === 0) {
-        slidePosition = totalSlides - 1
+    if (caseStudiesPosition === 0) {
+        caseStudiesPosition = caseStudiesTotal - 1
     } else {
-        slidePosition--
+        caseStudiesPosition--
     }
 
-    slides[slidePosition].classList.add("visible")
+    caseStudies[caseStudiesPosition].classList.add("visible")
 }
+
+/**********************************/
+/*** Testimonials Carousel ********/
+/**********************************/
+const testimonialsLeftArrow = document.getElementById("testimonials-left-arrow")
+const testimonialsRightArrow = document.getElementById("testimonials-right-arrow")
+
+testimonialsLeftArrow.addEventListener("click", () => {
+    nextTestimonial()
+})
+
+testimonialsRightArrow.addEventListener("click", () => {
+    previousTestimonial()
+})

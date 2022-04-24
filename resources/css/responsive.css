@@ -30,15 +30,8 @@
     .desktop-hidden {
         display: none;
     }
-
-    .testimonials__inner {
-        overflow-x: hidden;
-    }
-
-    .testimonials__inner:hover {
-        overflow-x: scroll;
-    }
 }
+
 
 /*******************************/
 /*** Small Screens Only ********/
@@ -94,34 +87,61 @@
     }
 
     /*** Testimonials ***/
-    .testimonials__inner {
-        -webkit-overflow-scrolling: touch;
-        overflow-x: scroll;
+    
+    .testimonials {
+        flex-direction: column;
+        align-items: center;
+        padding: 4em 0;
+    }
+
+    .testimonials__body {
+        width: 80%;
+        margin-left: 0;
+    }
+
+    .testimonials__portrait {
+        text-align: center;
+    }
+
+    .testimonials__img {
+        width: 80%;
+    }
+
+    .testimonials__img--art {
+        transform: translate(7%, -10%);
+
     }
 
     /*** Case Studies ***/
     .cstud__outer {
-        position: unset;
         z-index: unset;
         height: unset;
+        padding-top: 4em;
+        padding-bottom: 4em;
     }
 
     .cstud__inner {
         flex-direction: column;
         height: unset;
+        align-items: center;
+    }
+
+    .cstud__filler {
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 0;
     }
 
     .cstud__body {
         width: 100%;
     }
 
-    .cstud__title,
-    .cstud__desc {
-        color: black;
-    }
-
     .cstud__title {
         margin-top: 0;
+        color: black;
+        z-index: 1;
     }
 
     .cstud__btn {
@@ -135,6 +155,11 @@
         margin-bottom: 1em;
     }
 
+    .cstud__prev,
+    .cstud__next {
+        z-index: 1;
+    }
+    
     .cstud__prev {
         margin-right: 1em;
     }

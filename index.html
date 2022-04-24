@@ -70,117 +70,54 @@
         <a class="btn trusted__btn" href="#">Don't click me</a>
 
         <!-- Testimonials -->
-        <div class="testimonials__outer">
-            <div class="testimonials__inner" id="scrollDiv">
-                <div class="testimonial__overlay"></div>
+        <div class="testimonials">
+            <div class="testimonials__portrait">
+                <div class="testimonials__img--art"></div>
+                <img class="testimonials__img visible" src="./resources/images/testimonial1.jpg">
+                <img class="testimonials__img" src="./resources/images/testimonial2.jpg">
+                <img class="testimonials__img" src="./resources/images/testimonial3.jpg">
+                <!-- <img class="testimonials__img" src="./resources/images/image-name-here"> -->
+                <!-- (1) Add more images here -->
 
-                <!-- 
-                    Important! Whichever div with the id tag of scrollCenter
-                    will be the middle point of the horizontal scroll.
+            </div>
+            <div class="testimonials__body">
+                <p class="testimonials__desc visible">"1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae distinctio, corrupti, provident tenetur, vero illum optio magnam sint nesciunt facere expedita. Unde illum eos fuga asperiores temporibus. Aperiam, doloribus."</p>
+                <p class="testimonials__desc">"2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae distinctio, corrupti, provident tenetur, vero illum optio magnam sint nesciunt facere expedita. Unde illum eos fuga asperiores temporibus. Aperiam, doloribus."</p>
+                <p class="testimonials__desc">"3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae distinctio, corrupti, provident tenetur, vero illum optio magnam sint nesciunt facere expedita. Unde illum eos fuga asperiores temporibus. Aperiam, doloribus."</p>
+                <!-- <p class="testimonials__desc">"Quotes here"</p> -->
+                <!-- (2) Add more quotes/descriptions here -->
 
-                    For an even number of testimonials, setup a empty div in
-                    the middle with the id (like below)
+                <h3 class="testimonials__person visible">1John Smith // Sourcing Expert</h3>
+                <h3 class="testimonials__person">2John Smith // Sourcing Expert</h3>
+                <h3 class="testimonials__person">3John Smith // Sourcing Expert</h3>
+                <!-- <h3 class="testimonials__person">Titles here</h3> -->
+                <!-- (3) Add more names & occupations here -->
 
-                    For an odd number of testimonials, comment out empty div
-                    and place the id tag on the middle testimonial card
-                -->
-                <div class="testimonial__card">
-                    <div class="testimonial__card-left">
-                        <div class="testimonial__img-holder">
-                            <img class=""class=testimonial__img"" src="" alt="">
-                        </div>
-                        <p class="testimonial__giver">John K.</p>
-                        <p class="testimonial__job">Entrepreneur</p>
-                    </div>
-                    <div class="testimonial__card-right">
-                        <div class="testimonial__star-review">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                        </div>
-                        <p class="testimonial__review">I've been struggling for years with analytics management. StatStory has been a game changer.</p>
-                    </div>
-                </div>
-    
-                <div class="testimonial__card">
-                    <div class="testimonial__card-left">
-                        <div class="testimonial__img-holder">
-                            <img class=testimonial__img"" src="" alt="">
-                        </div>
-                        <p class="testimonial__giver">Kelly J.</p>
-                        <p class="testimonial__job">Brand Consultant</p>
-                    </div>
-                    <div class="testimonial__card-right">
-                        <div class="testimonial__star-review">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                        </div>
-                        <p class="testimonial__review">I recommend this service to all of my clients. It provides a clear correlation between action and audience response.</p>
-                    </div>
-                </div>
-
-                <!-- HORIZONTAL SCROLL ANCHOR POINT -->
-                <div id="scrollCenter"></div>
-
-
-                <div class="testimonial__card">
-                    <div class="testimonial__card-left">
-                        <div class="testimonial__img-holder">
-                            <img class=testimonial__img"" src="" alt="">
-                        </div>
-                        <p class="testimonial__giver">B.J. Ellison</p>
-                        <p class="testimonial__job">YouTuber</p>
-                    </div>
-                    <div class="testimonial__card-right">
-                        <div class="testimonial__star-review">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                        </div>
-                        <p class="testimonial__review">Far better than the built-in youtube analytics tools. Legit service!</p>
-                    </div>
-                </div>
-    
-                <div class="testimonial__card">
-                    <div class="testimonial__card-left">
-                        <div class="testimonial__img-holder">
-                            <img class=testimonial__img"" src="" alt="">
-                        </div>
-                        <p class="testimonial__giver">B.J. Ellison</p>
-                        <p class="testimonial__job">YouTuber</p>
-                    </div>
-                    <div class="testimonial__card-right">
-                        <div class="testimonial__star-review">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                            <img class="testimonial__star" src="./resources/images/star.svg" alt="">
-                        </div>
-                        <p class="testimonial__review">Far better than the built-in youtube analytics tools. Legit service!</p>
-                    </div>
+                <div class="testimonials__navigation">
+                    <svg class="testimonials__arrow" id="testimonials-left-arrow" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="white" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <line x1="5" y1="12" x2="9" y2="16" />
+                        <line x1="5" y1="12" x2="9" y2="8" />
+                    </svg>
+                    <svg class="testimonials__arrow" id="testimonials-right-arrow" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="white" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <line x1="15" y1="16" x2="19" y2="12" />
+                        <line x1="15" y1="8" x2="19" y2="12" />
+                    </svg>
                 </div>
             </div>
         </div>
 
-        
-
-        <!-- Case Studies -- Desktop Only-->
+        <!-- Case Studies -->
         <div class="cstud__outer">
-            <div class="cstud__filler mobile-hidden"></div>
+            <div class="cstud__filler"></div>
             <div class="cstud__diagnol mobile-hidden"></div>
 
             <div class="cstud__inner">
                 <div class="cstud__body">
                     <h2 class="cstud__title">Case Studies</h2>
-                    <p class="cstud__desc mobile-hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam fugiat fugit sequi nam exercitationem laboriosam, nobis odit molestiae quas ipsam animi qui assumenda quo adipisci ipsum doloremque obcaecati ad error.</p>
                     <a class="btn cstud__btn mobile-hidden" href="#">Learn More</a>
                 </div>
                 <div class="cstud__carousel">

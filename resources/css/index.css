@@ -111,6 +111,7 @@
 /****************************************/
 .testimonials {
     max-width: var(--max-width);
+    /* max-height: 575px; */
     margin-inline: auto;
     padding: 8em 4em;
     display: flex;
@@ -170,6 +171,23 @@
 .testimonials__arrow:hover,
 .testimonials__arrow:focus {
     opacity: 70%;
+    cursor: pointer;
+}
+
+.testimonials__img,
+.testimonials__desc,
+.testimonials__person{
+    animation: fadeVisibility 0.5s;
+}
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 
@@ -247,16 +265,18 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    animation: fadeVisibility 0.5s;
+    animation: fadeVisibility 2s;
 }
 
 @keyframes fadeVisibility {
     0% {
         opacity: 0;
+        transform: translateX(50%)
     }
 
     100% {
         opacity: 1;
+        transform: translateX(0%);
     }
 }
 

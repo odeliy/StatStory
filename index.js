@@ -8,41 +8,71 @@ hamburger.addEventListener("click", () => {
 })
 
 /**********************************/
-/*** Case Studies Carousel ********/
+/*** Carousels ********************/
 /**********************************/
-document.getElementById("prev").addEventListener("click", () => {
-    moveToPrevCaseStudy(caseStudies)
-})
-document.getElementById("next").addEventListener("click", () => {
-    moveToNextCaseStudy(caseStudies)
-})
+let caseStudiesPosition = 0
+let testimonialsPosition = 0
+
+let x = 0
+let count = 0
 
 const caseStudies = document.getElementsByClassName("cstud__item")
+const testimonialsImg = document.getElementsByClassName ("testimonials__img")
+const testimonialsDesc = document.getElementsByClassName ("testimonials__desc")
+const testimonialsPerson = document.getElementsByClassName ("testimonials__person")
+
 const caseStudiesTotal = caseStudies.length
-let caseStudiesPosition = 0
+const testimonialsTotal = testimonialsImg.length
 
-function hideAllSlides(slides) {
-    for (let slide of slides) {
-        slide.classList.remove("visible")
+function hideContent(content) {
+    for (let item of content) {
+        item.classList.remove("visible")
     }
 }
 
-function moveToNextCaseStudy(slides) {
-    hideAllSlides(slides)
+document.getElementById("testimonials-left-arrow").addEventListener("click", () => {
+    hideContent(testimonialsImg)
+    hideContent(testimonialsDesc)
+    hideContent(testimonialsPerson)
 
-    if (caseStudiesPosition === caseStudiesTotal - 1) {
-        caseStudiesPosition = 0
+    if(testimonialsPosition === 0) {
+        testimonialsPosition = testimonialsTotal - 1
     } else {
-        caseStudiesPosition++
+        testimonialsPosition--
     }
 
-    caseStudies[caseStudiesPosition].classList.add("visible")
-}
+    testimonialsImg[testimonialsPosition].classList.add("visible")
+    testimonialsDesc[testimonialsPosition].classList.add("visible")
+    testimonialsPerson[testimonialsPosition].classList.add("visible")
+})
 
-function moveToPrevCaseStudy(slides) {
-    hideAllSlides(slides)
+document.getElementById("testimonials-right-arrow").addEventListener("click", () => {
+    hideContent(testimonialsImg)
+    hideContent(testimonialsDesc)
+    hideContent(testimonialsPerson)
 
-    if (caseStudiesPosition === 0) {
+    if(testimonialsPosition === testimonialsTotal - 1) {
+        testimonialsPosition =  0
+    } else {
+        testimonialsPosition++
+    }
+
+    testimonialsImg[testimonialsPosition].classList.add("visible")
+    testimonialsDesc[testimonialsPosition].classList.add("visible")
+    testimonialsPerson[testimonialsPosition].classList.add("visible")
+})
+document.getElementById("case-studies-prev").addEventListener("click", () => {
+    prevCaseStudies()
+})
+
+document.getElementById("case-studies-next").addEventListener("click", () => {
+    nextCaseStudies()
+})
+
+function prevCaseStudies() {
+    hideContent(caseStudies)
+
+    if(caseStudiesPosition === 0) {
         caseStudiesPosition = caseStudiesTotal - 1
     } else {
         caseStudiesPosition--
@@ -51,16 +81,16 @@ function moveToPrevCaseStudy(slides) {
     caseStudies[caseStudiesPosition].classList.add("visible")
 }
 
-/**********************************/
-/*** Testimonials Carousel ********/
-/**********************************/
-const testimonialsLeftArrow = document.getElementById("testimonials-left-arrow")
-const testimonialsRightArrow = document.getElementById("testimonials-right-arrow")
+function nextCaseStudies() {
+    hideContent(caseStudies)
 
-testimonialsLeftArrow.addEventListener("click", () => {
-    nextTestimonial()
-})
+    if(caseStudiesPosition ===  caseStudiesTotal - 1) {
+        caseStudiesPosition = 0
+    } else {
+        caseStudiesPosition++
+    }
 
-testimonialsRightArrow.addEventListener("click", () => {
-    previousTestimonial()
-})
+    caseStudies[caseStudiesPosition].classList.add("visible")
+}
+
+// let interval = setInterval(nextCaseStudies, 5000)

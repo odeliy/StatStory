@@ -10,19 +10,10 @@ hamburger.addEventListener("click", () => {
 /**********************************/
 /*** Carousels ********************/
 /**********************************/
-let caseStudiesPosition = 0
-let testimonialsPosition = 0
+let position = 0
+const slides = document.getElementsByClassName("cstud__item")
+const numOfSlides = slides.length
 
-let x = 0
-let count = 0
-
-const caseStudies = document.getElementsByClassName("cstud__item")
-const testimonialsImg = document.getElementsByClassName ("testimonials__img")
-const testimonialsDesc = document.getElementsByClassName ("testimonials__desc")
-const testimonialsPerson = document.getElementsByClassName ("testimonials__person")
-
-const caseStudiesTotal = caseStudies.length
-const testimonialsTotal = testimonialsImg.length
 
 function hideContent(content) {
     for (let item of content) {
@@ -30,67 +21,28 @@ function hideContent(content) {
     }
 }
 
-document.getElementById("testimonials-left-arrow").addEventListener("click", () => {
-    hideContent(testimonialsImg)
-    hideContent(testimonialsDesc)
-    hideContent(testimonialsPerson)
-
-    if(testimonialsPosition === 0) {
-        testimonialsPosition = testimonialsTotal - 1
-    } else {
-        testimonialsPosition--
-    }
-
-    testimonialsImg[testimonialsPosition].classList.add("visible")
-    testimonialsDesc[testimonialsPosition].classList.add("visible")
-    testimonialsPerson[testimonialsPosition].classList.add("visible")
-})
-
-document.getElementById("testimonials-right-arrow").addEventListener("click", () => {
-    hideContent(testimonialsImg)
-    hideContent(testimonialsDesc)
-    hideContent(testimonialsPerson)
-
-    if(testimonialsPosition === testimonialsTotal - 1) {
-        testimonialsPosition =  0
-    } else {
-        testimonialsPosition++
-    }
-
-    testimonialsImg[testimonialsPosition].classList.add("visible")
-    testimonialsDesc[testimonialsPosition].classList.add("visible")
-    testimonialsPerson[testimonialsPosition].classList.add("visible")
-})
+/* Previous Arrow */
 document.getElementById("case-studies-prev").addEventListener("click", () => {
-    prevCaseStudies()
+    hideContent(slides)
+
+    if(position === 0) {
+        position = numOfSlides - 1
+    } else {
+        position--
+    }
+
+    slides[position].classList.add("visible")
 })
 
+/* Next Arrow */
 document.getElementById("case-studies-next").addEventListener("click", () => {
-    nextCaseStudies()
+    hideContent(slides)
+
+    if(position === numOfSlides - 1) {
+        position = 0
+    } else {
+        position++
+    }
+
+    slides[position].classList.add("visible")
 })
-
-function prevCaseStudies() {
-    hideContent(caseStudies)
-
-    if(caseStudiesPosition === 0) {
-        caseStudiesPosition = caseStudiesTotal - 1
-    } else {
-        caseStudiesPosition--
-    }
-
-    caseStudies[caseStudiesPosition].classList.add("visible")
-}
-
-function nextCaseStudies() {
-    hideContent(caseStudies)
-
-    if(caseStudiesPosition ===  caseStudiesTotal - 1) {
-        caseStudiesPosition = 0
-    } else {
-        caseStudiesPosition++
-    }
-
-    caseStudies[caseStudiesPosition].classList.add("visible")
-}
-
-// let interval = setInterval(nextCaseStudies, 5000)

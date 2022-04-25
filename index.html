@@ -12,16 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/style.css">
     <link rel="stylesheet" href="./resources/css/index.css">
-    <link rel="stylesheet" href="./resources/css/responsive.css">
 </head>
 <body>
 
     <!-- Header -->
-    <header class="header contain" id="header">
+    <header class="header" id="header">
         <img class="logo" src="./resources/images/logo.png" alt="" />
         <img class="hamburger" src="./resources/images/hamburger.svg" alt="" />
         <nav class="nav mobile-hidden">
-            <a class="nav__item nav__item--current" href="#">Home</a>
+            <a class="nav__item" href="#">Home</a>
             <a class="nav__item" href="#">Case Studies</a>
             <a class="nav__item" href="#">Pricing</a>
             <a class="nav__item" href="#">About Us</a>
@@ -31,7 +30,7 @@
     </header>
 
     <!-- Hero -->
-    <div class="hero contain">
+    <div class="hero">
         <div class="hero__body">
             <h1 class="hero__title">StatStory</h1>
             <p class="hero__desc">Our goal is to help businesses grow their YouTube channels, increase brand awareness, & generate leads with targeted YouTube Ad Campaigns.</p>
@@ -41,74 +40,176 @@
         <img class="hero__img" src="./resources/images/hero.png"/>
     </div>
     
-    <h2 class="trusted-title">Trusted by</h2>
     <div class="blue-body-background"> <!-- blue body starts here -->
         
         <!-- Trusted -->
-        <div class="trusted contain">
-            <div class="trusted__panel" id="panel-center">
-                <div class="trusted__icon trusted__icon--main">
-                    <img class="trusted__img" src="./resources/images/pat-lotz.png">
-                </div>
-                <p class="trusted__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sequi animi, assumenda iste ducimus incidunt molestiae adipisicing elit. Sit amet consectetur adipisicing.</p>
-            </div>
+        <div class="trusted">
+            <img class="trusted__icon--circ" id="trusted-icon-left" src="./resources/images/fishing-podcast.png">
+            <img class="trusted__icon" src="./resources/images/pat-lotz.png">
+            <img class="trusted__icon--circ" id="trusted-icon-right" src="./resources/images/fishing-podcast.png">
+        </div>
 
-            <div class="trusted__panel" id="panel-left">
-                <div class="trusted__icon trusted__icon--circle">
-                    <img class="trusted__img--circle" src="./resources/images/fishing-podcast.png">
-                </div>
-                <p class="trusted__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <!-- Service Description -->
+        <div class="serv">
+            <div class="serv__column">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae iure error accusamus eligendi voluptatibus.</p>
             </div>
-
-            <div class="trusted__panel" id="panel-right">
-                <div class="trusted__icon trusted__icon--circle">
-                    <img class="trusted__img--circle" src="./resources/images/fishing-podcast.png">
-                </div>
-                <p class="trusted__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="serv__column">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae iure error accusamus eligendi voluptatibus ea voluptas sapiente. Beatae laudantium!</p>
+            </div>
+            <div class="serv__column">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae iure error accusamus eligendi voluptatibus.</p>
             </div>
         </div>
-        <a class="btn trusted__btn" href="#">Don't click me</a>
 
         <!-- Testimonials -->
         <div class="testimonials">
-            <div class="testimonials__portrait">
-                <div class="testimonials__img--art"></div>
-                <img class="testimonials__img visible" src="./resources/images/testimonial1.jpg">
-                <img class="testimonials__img" src="./resources/images/testimonial2.jpg">
-                <img class="testimonials__img" src="./resources/images/testimonial3.jpg">
-                <!-- <img class="testimonials__img" src="./resources/images/image-name-here"> -->
-                <!-- (1) Add more images here -->
 
-            </div>
-            <div class="testimonials__body">
-                <p class="testimonials__desc visible">"1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae distinctio, corrupti, provident tenetur, vero illum optio magnam sint nesciunt facere expedita. Unde illum eos fuga asperiores temporibus. Aperiam, doloribus."</p>
-                <p class="testimonials__desc">"2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae distinctio, corrupti, provident tenetur, vero illum optio magnam sint nesciunt facere expedita. Unde illum eos fuga asperiores temporibus. Aperiam, doloribus."</p>
-                <p class="testimonials__desc">"3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae distinctio, corrupti, provident tenetur, vero illum optio magnam sint nesciunt facere expedita. Unde illum eos fuga asperiores temporibus. Aperiam, doloribus."</p>
-                <!-- <p class="testimonials__desc">"Quotes here"</p> -->
-                <!-- (2) Add more quotes/descriptions here -->
-
-                <h3 class="testimonials__person visible">1John Smith // Sourcing Expert</h3>
-                <h3 class="testimonials__person">2John Smith // Sourcing Expert</h3>
-                <h3 class="testimonials__person">3John Smith // Sourcing Expert</h3>
-                <!-- <h3 class="testimonials__person">Titles here</h3> -->
-                <!-- (3) Add more names & occupations here -->
-
-                <div class="testimonials__navigation">
-                    <svg class="testimonials__arrow" id="testimonials-left-arrow" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="white" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <line x1="5" y1="12" x2="19" y2="12" />
-                        <line x1="5" y1="12" x2="9" y2="16" />
-                        <line x1="5" y1="12" x2="9" y2="8" />
-                    </svg>
-                    <svg class="testimonials__arrow" id="testimonials-right-arrow" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="white" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <line x1="5" y1="12" x2="19" y2="12" />
-                        <line x1="15" y1="16" x2="19" y2="12" />
-                        <line x1="15" y1="8" x2="19" y2="12" />
-                    </svg>
+            <!-- individual testimonial start -->
+            <div class="testimonials__card">
+                <!-- left section -->
+                <div class="testimonials__left-col">
+                    <div class="testimonials__img-container">
+                        <img class="testimonials__img" src="./resources/images/testimonial1.jpg">
+                    </div>
+                    <p class="testimonials__name">Name</p>
+                    <p class="testimonials__occupation">Occupation</p>
+                </div>
+                <!-- right section -->
+                <div class="testimonials__right-col">
+                    <div class="testimonials__stars">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                    </div>
+                    <p class="testimonials__testimonial">"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, exercitationem cupiditate asperiores sunt delectus illum omnis."</p>
                 </div>
             </div>
+            <!-- individual testimonial end -->
+
+            <!-- individual testimonial start -->
+            <div class="testimonials__card">
+                <!-- left section -->
+                <div class="testimonials__left-col">
+                    <div class="testimonials__img-container">
+                        <img class="testimonials__img" src="./resources/images/testimonial1.jpg">
+                    </div>
+                    <p class="testimonials__name">Name</p>
+                    <p class="testimonials__occupation">Occupation</p>
+                </div>
+                <!-- right section -->
+                <div class="testimonials__right-col">
+                    <div class="testimonials__stars">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                    </div>
+                    <p class="testimonials__testimonial">"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, exercitationem cupiditate asperiores sunt delectus illum omnis."</p>
+                </div>
+            </div>
+            <!-- individual testimonial end -->
+
+            <!-- individual testimonial start -->
+            <div class="testimonials__card">
+                <!-- left section -->
+                <div class="testimonials__left-col">
+                    <div class="testimonials__img-container">
+                        <img class="testimonials__img" src="./resources/images/testimonial1.jpg">
+                    </div>
+                    <p class="testimonials__name">Name</p>
+                    <p class="testimonials__occupation">Occupation</p>
+                </div>
+                <!-- right section -->
+                <div class="testimonials__right-col">
+                    <div class="testimonials__stars">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                    </div>
+                    <p class="testimonials__testimonial">"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, exercitationem cupiditate asperiores sunt delectus illum omnis."</p>
+                </div>
+            </div>
+            <!-- individual testimonial end -->
+
+            <!-- individual testimonial start -->
+            <div class="testimonials__card">
+                <!-- left section -->
+                <div class="testimonials__left-col">
+                    <div class="testimonials__img-container">
+                        <img class="testimonials__img" src="./resources/images/testimonial1.jpg">
+                    </div>
+                    <p class="testimonials__name">Name</p>
+                    <p class="testimonials__occupation">Occupation</p>
+                </div>
+                <!-- right section -->
+                <div class="testimonials__right-col">
+                    <div class="testimonials__stars">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                    </div>
+                    <p class="testimonials__testimonial">"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, exercitationem cupiditate asperiores sunt delectus illum omnis."</p>
+                </div>
+            </div>
+            <!-- individual testimonial end -->
+
+            <!-- individual testimonial start -->
+            <div class="testimonials__card">
+                <!-- left section -->
+                <div class="testimonials__left-col">
+                    <div class="testimonials__img-container">
+                        <img class="testimonials__img" src="./resources/images/testimonial1.jpg">
+                    </div>
+                    <p class="testimonials__name">Name</p>
+                    <p class="testimonials__occupation">Occupation</p>
+                </div>
+                <!-- right section -->
+                <div class="testimonials__right-col">
+                    <div class="testimonials__stars">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                    </div>
+                    <p class="testimonials__testimonial">"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, exercitationem cupiditate asperiores sunt delectus illum omnis."</p>
+                </div>
+            </div>
+            <!-- individual testimonial end -->
+
+            <!-- individual testimonial start -->
+            <div class="testimonials__card">
+                <!-- left section -->
+                <div class="testimonials__left-col">
+                    <div class="testimonials__img-container">
+                        <img class="testimonials__img" src="./resources/images/testimonial1.jpg">
+                    </div>
+                    <p class="testimonials__name">Name</p>
+                    <p class="testimonials__occupation">Occupation</p>
+                </div>
+                <!-- right section -->
+                <div class="testimonials__right-col">
+                    <div class="testimonials__stars">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                        <img class="testimonials__star" src="resources/images/star.svg" alt="">
+                    </div>
+                    <p class="testimonials__testimonial">"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, exercitationem cupiditate asperiores sunt delectus illum omnis."</p>
+                </div>
+            </div>
+            <!-- individual testimonial end -->
         </div>
+
 
         <!-- Case Studies -->
         <div class="cstud__outer">
@@ -118,8 +219,9 @@
             <div class="cstud__inner">
                 <div class="cstud__body">
                     <h2 class="cstud__title">Case Studies</h2>
-                    <a class="btn cstud__btn mobile-hidden" href="#">Learn More</a>
+                    <a class="btn cstud__btn" href="#">Learn More</a>
                 </div>
+
                 <div class="cstud__carousel">
                     <div class="cstud__prev" id="case-studies-prev"></div>
 
@@ -159,7 +261,7 @@
     </div> <!-- blue body ends here -->
 
     <footer class="footer-frame">
-        <div class="footer contain">
+        <div class="footer">
             <div class="footer__info">
                 <img class="footer__logo" src="./resources/images/footer-logo.png" alt="">
                 <p class="footer__business-info">Business info</p>

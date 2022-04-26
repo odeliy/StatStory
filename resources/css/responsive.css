@@ -1,0 +1,203 @@
+
+/*** style.css ***************************************************************/
+
+/****************************************/
+/*** Generic ****************************/
+/****************************************/
+@media (max-width: 850px) {
+    .mobile-hidden {
+        display: none;
+    }
+}
+
+/****************************************/
+/*** Header *****************************/
+/****************************************/
+@media (max-width: 850px) {
+    .logo {
+        width: 35px;
+    }
+}
+
+@media (min-width: 851px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav {
+        position: unset;
+        flex-direction: unset;
+        transform: unset;
+        width: unset;
+        box-shadow: unset;
+    }
+
+    .nav__item + .nav__item {
+        margin-left: 2em;
+    }
+
+    .nav__item:hover,
+    .nav__item:focus {
+        text-decoration: underline;
+    }
+}
+
+/****************************************/
+/*** Free Ads ***************************/
+/****************************************/
+@media (max-width: 850px) {
+    .free-ads {
+        width: 80%;
+    }
+
+    .free-ads__input {
+        font-size: 1rem;
+    }
+}
+
+/****************************************/
+/*** Footer *****************************/
+/****************************************/
+@media (max-width: 750px) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer__list {
+        line-height: 2.5em;
+    }
+}
+
+/*** index.css ***************************************************************/
+
+/****************************************/
+/*** Hero *******************************/
+/****************************************/
+@media (max-width: 850px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero__body {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .hero__img {
+        width: 100%;
+        max-width: 700px;
+        order: -1;
+    }
+
+    .hero__title {
+        margin-bottom: 0.25em;
+    }
+}
+
+/****************************************/
+/*** Trusted By *************************/
+/****************************************/
+@media (max-width: 650px) {
+    #trusted-icon-left,
+    #trusted-icon-right {
+        display: none;
+    }
+}
+
+/****************************************/
+/*** Service Desc ***********************/
+/****************************************/
+@media (max-width: 890px) {
+    .serv {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .serv__column {
+        width: unset;
+        max-width: 700px;
+    }
+}
+
+/****************************************/
+/*** Testimonials ***********************/
+/****************************************/
+@media (max-width: 850px) {
+    .testimonials {
+        overflow-x: scroll;
+    }
+}
+
+/****************************************/
+/*** Case Studies Desktop ***************/
+/****************************************/
+@media (max-width: 1000px) {
+    .cstud__outer {
+        height: var(--cstud-mobile-height);
+    }
+
+    .cstud__filler {
+        left: 0%;
+    }
+
+    .cstud__diagnol {
+        display: none;
+    }
+
+    .cstud__inner {
+        height: var(--cstud-mobile-height);
+        justify-content: unset;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cstud__body {
+        width: unset;
+        height: unset;
+    }
+
+    .cstud__title {
+        margin: .5em 0 .25em 0;
+        color: black;
+    }
+
+    .cstud__btn {
+        display: none;
+    }
+
+    .cstud__carousel {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .cstud__item {
+        height: 400px;
+    }
+
+    .cstud__person,
+    .cstud__subscribers,
+    .cstud__views,
+    .cstud__leads {
+        font-size: .85rem;
+    }
+
+    .cstud__person {
+        top: 7%;
+        letter-spacing: 0;
+    }
+
+    .cstud__subscribers {
+        left: 27%;
+    }
+
+    .cstud__views {
+        right: 31.5%;
+    }
+
+    .cstud__leads {
+        left: 40%;
+        font-size: 1.75rem;
+    }
+}
+
+/*** case-studies.css ********************************************************/

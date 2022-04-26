@@ -3,7 +3,7 @@
 /****************************************/
 .hero {
     max-width: var(--max-width);
-    margin: 4em auto 6em auto;
+    margin: 4em auto 12em auto;
     padding: 0 2em;
 
     display: flex;
@@ -40,31 +40,11 @@
     background-color: #005cc5;
 }
 
-@media (max-width: 850px) {
-    .hero {
-        flex-direction: column;
-    }
-
-    .hero__img {
-        order: -1;
-        width: 100%;
-        max-width: 700px;
-    }
-
-    .hero__body {
-        width: 100%;
-        max-width: 700px;
-    }
-
-    .hero__title {
-        margin-bottom: 0.25em;
-    }
-}
-
 /****************************************/
 /*** Trusted By *************************/
 /****************************************/
 .trusted {
+    position: relative;
     /* height needs to be half icon height */
     height: 50px;
     max-width: var(--max-width);
@@ -74,17 +54,28 @@
     justify-content: space-around;
 }
 
+.trusted__by {
+    position: absolute;
+    top: -110px;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
 .trusted__icon {
     height: 100px;
     margin-top: -50px;
     border: 1px solid lightgrey;
 }
 
+.animate {animation: fadeVisibility .5s;}
+@keyframes fadeVisibility {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
 .trusted__icon--circ {
-    height: 100px;
-    margin-top: -50px;
     border-radius: 50%;
-    border: 1px solid lightgrey;
 }
 
 #trusted-icon-left {margin-right: 75px;}
@@ -112,8 +103,10 @@
 /****************************************/
 
 .testimonials {
+    height: 220px;
     margin-bottom: 10em;
     padding: 0 2em;
+    
     display: flex;
     overflow: auto;
 }
@@ -129,12 +122,21 @@
 
     background-color: white;
     border-radius: 30px;
+
+    /* animation: bannermove 10s linear infinite; */
 }
+
+/* @keyframes bannermove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, 0);
+    }
+  } */
 
 .testimonials__card:first-child {margin-left: auto;}
 .testimonials__card:last-child {margin-right: auto;}
-
-
 
 .testimonials__left-col {
     width: 35%;
@@ -240,11 +242,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.cstud__title {color: white;}
-/* .cstud__btn:hover {background-color: #005cc5;} */
+.cstud__title {
+    font-size: 3rem;
+    color: white;
+}
+
+.cstud__btn {
+    transform: translateY(50%);
+}
 
 .cstud__carousel {
     width: 50%;
@@ -284,10 +292,10 @@
     background-repeat: no-repeat;
     background-size: contain;
 
-    animation: fadeVisibility 2s;
+    animation: swoopFromRight 2s;
 }
 
-@keyframes fadeVisibility {
+@keyframes swoopFromRight {
     0% {
         opacity: 0;
         transform: translateX(50%)
@@ -297,6 +305,11 @@
         opacity: 1;
         transform: translateX(0%);
     }
+}
+
+/* applied by js on carousel cstud__items */
+.visible {
+    display: unset;
 }
 
 .cstud__person,
@@ -335,81 +348,4 @@
 
     font-size: 2.25rem;
     font-weight: 700;
-}
-
-/****************************************/
-/*** Case Studies Mobile ****************/
-/****************************************/
-@media (max-width: 850px) {
-    :root {
-        --cstud-mobile-height: 600px;
-    }
-
-    .cstud__outer {
-        height: var(--cstud-mobile-height);
-    }
-
-    .cstud__filler {
-        left: 0%;
-    }
-
-    .cstud__inner {
-        height: var(--cstud-mobile-height);
-        justify-content: unset;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cstud__body {
-        width: unset;
-        height: unset;
-    }
-
-    .cstud__title {
-        margin: .5em 0 .25em 0;
-        color: black;
-    }
-
-    .cstud__btn {
-        background-color: var(--background-blue);
-        color: white;
-    }
-
-    .cstud__carousel {
-        width: 100%;
-        margin-top: 40px;
-    }
-
-    .cstud__item {
-        height: 400px;
-    }
-
-    .cstud__person,
-    .cstud__subscribers,
-    .cstud__views,
-    .cstud__leads {
-        font-size: .85rem;
-    }
-
-    .cstud__person {
-        top: 7%;
-        letter-spacing: 0;
-    }
-
-    .cstud__subscribers {
-        left: 27%;
-    }
-
-    .cstud__views {
-        right: 31.5%;
-    }
-
-    .cstud__leads {
-        left: 40%;
-        font-size: 1.75rem;
-    }
-}
-
-.visible {
-    display: unset;
 }

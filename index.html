@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/style.css">
     <link rel="stylesheet" href="./resources/css/index.css">
+    <link rel="stylesheet" href="./resources/css/responsive.css">
 </head>
 <body>
 
@@ -41,15 +42,20 @@
     </div>
     
     <div class="blue-body-background"> <!-- blue body starts here -->
-        
+
+        <!------------->
         <!-- Trusted -->
+        <!------------->
         <div class="trusted">
-            <img class="trusted__icon--circ" id="trusted-icon-left" src="./resources/images/fishing-podcast.png">
-            <img class="trusted__icon" src="./resources/images/pat-lotz.png">
-            <img class="trusted__icon--circ" id="trusted-icon-right" src="./resources/images/fishing-podcast.png">
+            <span class="trusted__by">Trusted by</span>
+            <img class="trusted__icon trusted__icon--circ" id="trusted-icon-left" src="./resources/images/fishing-podcast.png">
+            <img class="trusted__icon" id="main-icon" src="./resources/images/pat-lotz.png">
+            <img class="trusted__icon trusted__icon--circ" id="trusted-icon-right" src="./resources/images/fishing-podcast.png">
         </div>
 
+        <!------------------------->
         <!-- Service Description -->
+        <!------------------------->
         <div class="serv">
             <div class="serv__column">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae iure error accusamus eligendi voluptatibus.</p>
@@ -62,9 +68,22 @@
             </div>
         </div>
 
+        <!------------------>
         <!-- Testimonials -->
+        <!------------------>
         <div class="testimonials">
 
+                <!-- 
+                    Important! Whichever div with the id tag of scrollCenter
+                    will be the middle point of the horizontal scroll.
+                    For an even number of testimonials, setup a empty div in
+                    the middle with the id (see lower down)
+
+                    For an odd number of testimonials, comment out empty div
+                    and place the id tag on the middle testimonial card
+                -->
+
+            <!-- 1 -->
             <!-- individual testimonial start -->
             <div class="testimonials__card">
                 <!-- left section -->
@@ -89,6 +108,7 @@
             </div>
             <!-- individual testimonial end -->
 
+            <!-- 2 -->
             <!-- individual testimonial start -->
             <div class="testimonials__card">
                 <!-- left section -->
@@ -113,6 +133,7 @@
             </div>
             <!-- individual testimonial end -->
 
+            <!-- 3 -->
             <!-- individual testimonial start -->
             <div class="testimonials__card">
                 <!-- left section -->
@@ -137,6 +158,12 @@
             </div>
             <!-- individual testimonial end -->
 
+            <!-------------------------------------->
+            <!-- CENTER POINT OF HORIZONTAL SCROLL-->
+            <div id="scrollCenter"></div>
+            <!-------------------------------------->
+
+            <!-- 4 -->
             <!-- individual testimonial start -->
             <div class="testimonials__card">
                 <!-- left section -->
@@ -161,6 +188,7 @@
             </div>
             <!-- individual testimonial end -->
 
+            <!-- 5 -->
             <!-- individual testimonial start -->
             <div class="testimonials__card">
                 <!-- left section -->
@@ -185,6 +213,7 @@
             </div>
             <!-- individual testimonial end -->
 
+            <!-- 6 -->
             <!-- individual testimonial start -->
             <div class="testimonials__card">
                 <!-- left section -->
@@ -210,11 +239,12 @@
             <!-- individual testimonial end -->
         </div>
 
-
+        <!------------------>
         <!-- Case Studies -->
+        <!------------------>
         <div class="cstud__outer">
             <div class="cstud__filler"></div>
-            <div class="cstud__diagnol mobile-hidden"></div>
+            <div class="cstud__diagnol"></div>
 
             <div class="cstud__inner">
                 <div class="cstud__body">
@@ -240,7 +270,7 @@
                     </a>
     
                     <a class="cstud__item" href="#">
-                        <span class="cstud__person">Kim Smithson | Spa Repair</span>
+                        <span class="cstud__person">Joe Smith | Spa Repair</span>
                         <span class="cstud__subscribers">980%</span>
                         <span class="cstud__views">50%</span>
                         <span class="cstud__leads">9X</span>
@@ -251,7 +281,9 @@
             </div>
         </div>
 
+        <!-------------->
         <!-- Free Ads -->
+        <!-------------->
         <div class="free-ads">
             <h2 class="free-ads__title">Want $75 in free ads?</h2>
             <input class="free-ads__input" type="text" placeholder="Enter your email to learn how">

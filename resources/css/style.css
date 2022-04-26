@@ -1,17 +1,17 @@
 /****************************************/
 /*** Globals ****************************/
 /****************************************/
-* {box-sizing: border-box;}
-
 :root {
     --background-blue: #046ce0;
     --max-width: 1500px;
     --header-height: 80px;
     --cstud-height: 800px;
+    --cstud-mobile-height: 600px;
     --diagnol-angle: 3;
 }
 
 body {
+    box-sizing: border-box;
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
 }
@@ -35,11 +35,6 @@ p {
 /****************************************/
 /*** Generic ****************************/
 /****************************************/
-.flex--center {
-    display: flex;
-    align-items: center;
-}
-
 .btn {
     display: block;
     width: fit-content;
@@ -51,7 +46,6 @@ p {
     background-color: white;
     color: black;
 }
-
 
 /****************************************/
 /*** Header *****************************/
@@ -99,39 +93,6 @@ p {
     text-decoration: unset;
     color: unset;
 }
-
-@media (min-width: 851px) {
-    .hamburger {
-        display: none;
-    }
-
-    .nav {
-        position: unset;
-        flex-direction: unset;
-        transform: unset;
-        width: unset;
-        box-shadow: unset;
-    }
-
-    .nav__item + .nav__item {
-        margin-left: 2em;
-    }
-
-    .nav__item:hover,
-    .nav__item:focus {
-        text-decoration: underline;
-    }
-}
-
-@media (max-width: 850px) {
-    .logo {
-        width: 35px;
-    }
-
-    .mobile-hidden {
-        display: none;
-    }
-}
 /****************************************/
 /*** Free Ads ***************************/
 /****************************************/
@@ -166,16 +127,6 @@ p {
 .free-ads__btn {
     align-self: end;
     margin-bottom: 3em;
-}
-
-@media (max-width: 850px) {
-    .free-ads {
-        width: 80%;
-    }
-
-    .free-ads__input {
-        font-size: 1rem;
-    }
 }
 
 
@@ -216,14 +167,4 @@ p {
 .footer__link {
     text-decoration: none;
     color: white;
-}
-
-@media (max-width: 750px) {
-    .footer {
-        flex-direction: column;
-    }
-
-    .footer__list {
-        line-height: 2.5em;
-    }
 }

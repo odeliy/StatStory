@@ -1,24 +1,54 @@
+/* this stylesheet applies to all pages on site */
+
 /****************************************/
 /*** Globals ****************************/
 /****************************************/
 :root {
+    --offwhite: #F7F6F9;
     --background-blue: #046ce0;
-    --max-width: 1500px;
-    --header-height: 80px;
-    --cstud-height: 800px;
-    --cstud-mobile-height: 600px;
-    --diagnol-angle: 3;
+    --max-width: 1300px;
 }
 
 body {
     box-sizing: border-box;
-    font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 h2 {
     font-weight: 400;
     font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.25rem;
+    line-height: 1.69;
+}
+
+/****************************************/
+/*** Generic ****************************/
+/****************************************/
+.contain {
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding: 0 2em;
+}
+
+.btn {
+    display: block;
+    width: fit-content;
+    padding: 0.25em 1.2em;
+    border-radius: 1em;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 1px;
+    background-color: white;
+    color: black;
+}
+
+.white-wrapper {
+    background-color: white;
 }
 
 .blue-body-background {
@@ -27,45 +57,26 @@ h2 {
     width: 100%;
 }
 
-.btn,
-p {
-    font-size: 1.25rem;
-}
-
-/****************************************/
-/*** Generic ****************************/
-/****************************************/
-.btn {
-    display: block;
-    width: fit-content;
-    padding: 0.25em 1.2em;
-    border-radius: 1em;
-    text-decoration: none;
-    font-family: 'Nunito', sans-serif;
-    letter-spacing: 1px;
-    background-color: white;
-    color: black;
-}
-
 /****************************************/
 /*** Header *****************************/
 /****************************************/
 .header {
-    max-width: var(--max-width);
-    height: var(--header-height);
-    margin-inline: auto;
+    position: relative;
+    height: 80px;
     margin-top: 1em;
-    padding: 0 2em;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    position: relative;
 }
 
 .logo {
     width: 45px;
+}
+
+@media (max-width: 850px) {
+    .logo {
+        width: 35px;
+    }
 }
 
 .hamburger {
@@ -75,23 +86,51 @@ p {
 
 .nav {
     position: absolute;
-    top: var(--header-height);
-    left: 50%;
     width: 100%;
-    
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     flex-direction: column;
-
-    transform: translateX(-50%);
     background-color: white;
     box-shadow: 0px 5px 8px lightgrey;
 }
 
 .nav__item {
     padding: 1em 0;
-    text-decoration: unset;
-    color: unset;
+    text-decoration: none;
+    color: black;
+}
+
+/* hides <nav></nav> */
+@media (max-width: 850px) {
+    .mobile-hidden {
+        display: none;
+    }
+}
+
+@media (min-width: 851px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav {
+        position: unset;
+        flex-direction: unset;
+        transform: unset;
+        width: unset;
+        box-shadow: unset;
+    }
+
+    .nav__item + .nav__item {
+        margin-left: 2em;
+    }
+
+    .nav__item:hover,
+    .nav__item:focus {
+        text-decoration: underline;
+    }
 }
 /****************************************/
 /*** Free Ads ***************************/
@@ -99,29 +138,28 @@ p {
 .free-ads {
     height: 500px;
     max-width: 380px;
-
     margin-inline: auto;
     margin-top: 4em;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .free-ads__title {
-    color: white;
-    text-align: center;
     margin: 0;
+    text-align: center;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .free-ads__input {
-    border: none;
+    text-align: center;
     margin-top: 20px;
     margin-bottom: 40px;
     padding: 0.5em 1em;
+    border: none;
     border-radius: 1.25em;
     font-size: 1.25rem;
-    text-align: center;
 }
 
 .free-ads__btn {
@@ -129,6 +167,15 @@ p {
     margin-bottom: 3em;
 }
 
+@media (max-width: 850px) {
+    .free-ads {
+        width: 80%;
+    }
+
+    .free-ads__input {
+        font-size: 1rem;
+    }
+}
 
 /****************************************/
 /*** Footer *****************************/
@@ -138,14 +185,9 @@ p {
 }
 
 .footer {
-    max-width: var(--max-width);
-    margin-inline: auto;
-    padding: 2em;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     color: white;
 }
 
@@ -154,8 +196,8 @@ p {
 }
 
 .footer__business-info {
-    text-align: center;
     margin: 0;
+    text-align: center;
     font-size: 1rem;
 }
 
@@ -167,4 +209,14 @@ p {
 .footer__link {
     text-decoration: none;
     color: white;
+}
+
+@media (max-width: 750px) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer__list {
+        line-height: 2.5em;
+    }
 }

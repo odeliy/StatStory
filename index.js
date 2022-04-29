@@ -65,3 +65,5 @@ document.getElementById("case-studies-next").addEventListener("click", () => {
 
     slides[position].classList.add("visible")
 })
+
+/* this comment will be a new commit to experiment with git... */

@@ -20,12 +20,6 @@ scrollBanner.addEventListener("mouseleave", () => {
     scrollBanner.style.animationPlayState = "running"
 })
 
-
-scrollBanner.addEventListener("wheel", (evt) => {
-    evt.preventDefault();
-    scrollBanner.scrollLeft += evt.deltaY
-})
-
 /**********************************/
 /*** carousel *********************/
 /**********************************/

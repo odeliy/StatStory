@@ -1,5 +1,5 @@
 /****************************************/
-/*** Hero *******************************/
+/*** hero *******************************/
 /****************************************/
 .hero {
   margin-top: 4em;
@@ -30,16 +30,6 @@
   line-height: 1.5;
 }
 
-.hero__btn {
-  margin-top: 2em;
-  color: white;
-  background-color: var(--background-blue);
-}
-
-.hero__btn:hover {
-  background-color: #005cc5;
-}
-
 @media (max-width: 850px) {
   .hero {
     flex-direction: column;
@@ -62,7 +52,7 @@
 }
 
 /****************************************/
-/*** Trusted By *************************/
+/*** trusted by *************************/
 /****************************************/
 :root {
   --trusted-height: 100px;
@@ -95,13 +85,6 @@
   border-radius: 100%;
 }
 
-#trusted-icon-left {
-  margin-right: 75px;
-}
-#trusted-icon-right {
-  margin-left: 75px;
-}
-
 @media (max-width: 655px) {
   .trusted {
     height: 30px;
@@ -113,54 +96,36 @@
     height: 60px;
     margin-top: -30px;
   }
-
-  #trusted-icon-left {
-    margin-right: unset;
-  }
-  #trusted-icon-right {
-    margin-left: unset;
-  }
 }
 
 /****************************************/
-/*** Service Desc ***********************/
+/*** struggle ***************************/
 /****************************************/
-.serv {
-  padding-top: 4em;
-  margin-bottom: 8em;
+.struggle {
+  margin-bottom: 4em;
   display: flex;
-  color: white;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.serv__column {
-  width: 33.3%;
-  padding: 0 2em;
+.struggle__graphs {
+  width: 50%;
 }
 
-.serv__column p {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 890px) {
-  .serv {
-    margin-bottom: 4em;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .serv__column {
-    width: unset;
-    max-width: 700px;
-    padding: 0 0;
-  }
-
-  .serv__column p {
-    line-height: 1.69;
-  }
+.struggle__body {
+  width: 50%;
 }
 
 /****************************************/
-/*** Testimonials ***********************/
+/*** advertising experts ****************/
+/****************************************/
+.experts {
+  height: 500px;
+  margin-bottom: 4em;
+}
+
+/****************************************/
+/*** testimonials banner ****************/
 /****************************************/
 
 /*
@@ -287,7 +252,47 @@
 }
 
 /****************************************/
-/*** Case Studies Desktop ***************/
+/*** why ********************************/
+/****************************************/
+.why {
+  height: 500px;
+  margin-bottom: 4em;
+}
+
+/****************************************/
+/*** who ********************************/
+/****************************************/
+.who {
+  height: 200px;
+  margin-bottom: 4em;
+}
+
+/****************************************/
+/*** maximize exposure ******************/
+/****************************************/
+.exposure {
+  height: 200px;
+  margin-bottom: 4em;
+}
+
+/****************************************/
+/*** measuring success ******************/
+/****************************************/
+.success {
+  height: 500px;
+  margin-bottom: 4em;
+}
+
+/****************************************/
+/*** why work with statStory ************/
+/****************************************/
+.why2 {
+  height: 500px;
+  margin-bottom: 4em;
+}
+
+/****************************************/
+/*** case studies carousel **************/
 /****************************************/
 :root {
   --cstud-height: 700px;
@@ -509,4 +514,12 @@
     left: 40%;
     font-size: 1.75rem;
   }
+}
+
+/****************************************/
+/*** about us ***************************/
+/****************************************/
+.about {
+  height: 500px;
+  padding-bottom: 2em;
 }

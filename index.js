@@ -27,6 +27,9 @@ let position = 0;
 const slides = document.getElementsByClassName("cstud__item");
 const numOfSlides = slides.length;
 
+let hoverState = false;
+const carousel = document.querySelector(".cstud__carousel");
+
 function hideContent(content) {
   for (let item of content) {
     item.classList.remove("visible");
@@ -48,6 +51,10 @@ document.getElementById("case-studies-prev").addEventListener("click", () => {
 
 /* Next Arrow */
 document.getElementById("case-studies-next").addEventListener("click", () => {
+  nextSlide();
+});
+
+function nextSlide() {
   hideContent(slides);
 
   if (position === numOfSlides - 1) {
@@ -57,4 +64,19 @@ document.getElementById("case-studies-next").addEventListener("click", () => {
   }
 
   slides[position].classList.add("visible");
+}
+
+/* automatic movement */
+carousel.addEventListener("mouseenter", () => {
+  hoverState = true;
 });
+
+carousel.addEventListener("mouseleave", () => {
+  hoverState = false;
+});
+
+setInterval(() => {
+  if (!hoverState) {
+    nextSlide();
+  }
+}, 3000);

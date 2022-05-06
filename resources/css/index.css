@@ -104,7 +104,6 @@
 .struggle {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .struggle__graphs {
@@ -119,8 +118,13 @@
 }
 
 .struggle__body {
-  max-width: 500px;
+  max-width: 700px;
   padding: 0 20px;
+}
+
+.struggle__title {
+  width: 70%;
+  margin-inline: auto;
 }
 
 .struggle__btn {
@@ -135,6 +139,7 @@
 .experts__outer {
   height: 70vh;
   min-height: 600px;
+  max-height: 800px;
   max-width: var(--banner-width); /* from testimonials section */
   margin-inline: auto;
   background-image: url(../images/laptop.png);
@@ -283,6 +288,7 @@
 .why {
   margin-top: -75px; /* wtf */
   display: flex;
+  justify-content: center;
 }
 
 .why__ghost {
@@ -291,7 +297,12 @@
 }
 
 .why__body {
+  max-width: 785px;
   margin-left: 5em;
+}
+
+.why__title {
+  text-align: center;
 }
 
 .why__list {
@@ -309,6 +320,7 @@
 /****************************************/
 .who {
   display: flex;
+  justify-content: center;
 }
 
 .who__img-frame {
@@ -324,6 +336,7 @@
 }
 
 .who__body {
+  max-width: 785px;
   margin-left: 5em;
   padding: 4em 0 6em;
 }
@@ -338,22 +351,29 @@
 .exposure {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .exposure__body {
   width: 50%;
+  max-width: 700px;
+}
+
+.exposure__img-frame {
+  width: 40%;
 }
 
 .exposure__img {
-  width: 40%;
+  width: 100%;
+  max-width: 420px;
+  display: block;
+  margin-inline: auto;
 }
 
 /****************************************/
 /*** measuring success ******************/
 /****************************************/
 .success {
-  max-width: var(--banner-width); /* from testimonial section */
   margin-inline: auto;
   margin-bottom: 100px;
   display: flex;
@@ -385,14 +405,14 @@
 
 .why2__body {
   width: 50%;
+  max-width: 800px;
+  padding-right: 2em;
 }
 
 .why2__title {
+  width: 70%;
+  margin-inline: auto;
   text-align: center;
-}
-
-.why2__list {
-  padding-left: 0;
 }
 
 .why2__list li {
@@ -400,7 +420,7 @@
 }
 
 .why2__body2 {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -408,6 +428,7 @@
 
 .why2__img {
   width: 100%;
+  max-width: 600px;
 }
 
 .why2__btn {
@@ -520,12 +541,12 @@
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    /* transform: translateX(50%) */
+    transform: translateX(50%);
   }
 
   100% {
     opacity: 1;
-    /* transform: translateX(0%); */
+    transform: translateX(0%);
   }
 }
 
@@ -651,7 +672,7 @@
 }
 
 .about__desc {
-  max-width: 700px;
+  max-width: 900px;
 }
 
 .about__team {

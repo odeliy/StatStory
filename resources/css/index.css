@@ -62,7 +62,7 @@
   position: relative;
   height: calc(var(--trusted-height) / 2);
   max-width: var(--max-width);
-  margin: 50px auto;
+  margin: 0 auto 100px;
   display: flex;
   justify-content: space-around;
 }
@@ -102,7 +102,6 @@
 /*** struggle ***************************/
 /****************************************/
 .struggle {
-  margin-bottom: 4em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -112,16 +111,43 @@
   width: 50%;
 }
 
+.struggle__img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin-inline: auto;
+}
+
 .struggle__body {
-  width: 50%;
+  max-width: 500px;
+  padding: 0 20px;
+}
+
+.struggle__btn {
+  display: block;
+  margin-inline: auto;
+  margin-top: 2em;
 }
 
 /****************************************/
 /*** advertising experts ****************/
 /****************************************/
-.experts {
-  height: 500px;
-  margin-bottom: 4em;
+.experts__outer {
+  height: 70vh;
+  min-height: 600px;
+  max-width: var(--banner-width); /* from testimonials section */
+  margin-inline: auto;
+  background-image: url(../images/laptop.png);
+  background-color: #9c9c9c;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.experts__body {
+  max-width: 500px;
+  padding-top: 4em;
 }
 
 /****************************************/
@@ -141,8 +167,8 @@
   max-width: var(--banner-width);
   margin-inline: auto;
   height: 220px;
-  margin-bottom: 10em;
   overflow: hidden;
+  transform: translateY(-75%);
 }
 
 .slidebanner {
@@ -255,40 +281,137 @@
 /*** why ********************************/
 /****************************************/
 .why {
-  height: 500px;
-  margin-bottom: 4em;
+  margin-top: -75px; /* wtf */
+  display: flex;
+}
+
+.why__ghost {
+  width: 420px;
+  flex-shrink: 0;
+}
+
+.why__body {
+  margin-left: 5em;
+}
+
+.why__list {
+  padding-left: 2em;
+}
+
+.why__btn {
+  margin-top: 2em;
+  display: block;
+  margin-inline: auto;
 }
 
 /****************************************/
 /*** who ********************************/
 /****************************************/
 .who {
-  height: 200px;
-  margin-bottom: 4em;
+  display: flex;
+}
+
+.who__img-frame {
+  width: 420px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.who__img {
+  position: absolute;
+  transform: translateY(-55%);
+  width: 100%;
+}
+
+.who__body {
+  margin-left: 5em;
+  padding: 4em 0 6em;
+}
+
+.who__title {
+  text-align: center;
 }
 
 /****************************************/
 /*** maximize exposure ******************/
 /****************************************/
 .exposure {
-  height: 200px;
-  margin-bottom: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.exposure__body {
+  width: 50%;
+}
+
+.exposure__img {
+  width: 40%;
 }
 
 /****************************************/
 /*** measuring success ******************/
 /****************************************/
 .success {
-  height: 500px;
-  margin-bottom: 4em;
+  max-width: var(--banner-width); /* from testimonial section */
+  margin-inline: auto;
+  margin-bottom: 100px;
+  display: flex;
+}
+
+.success__ghost {
+  width: 50%;
+  background-image: url(../images/work.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.success__body {
+  width: 30%;
+  max-width: 750px;
+  padding-block: 4em;
+  padding-left: 50px;
 }
 
 /****************************************/
 /*** why work with statStory ************/
 /****************************************/
 .why2 {
-  height: 500px;
-  margin-bottom: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.why2__body {
+  width: 50%;
+}
+
+.why2__title {
+  text-align: center;
+}
+
+.why2__list {
+  padding-left: 0;
+}
+
+.why2__list li {
+  margin-bottom: 1em;
+}
+
+.why2__body2 {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.why2__img {
+  width: 100%;
+}
+
+.why2__btn {
+  margin-top: 4em;
 }
 
 /****************************************/
@@ -520,6 +643,46 @@
 /*** about us ***************************/
 /****************************************/
 .about {
-  height: 500px;
-  padding-bottom: 2em;
+  padding-bottom: 4em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__desc {
+  max-width: 700px;
+}
+
+.about__team {
+  margin-top: 4em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__person {
+  width: 33%;
+  padding: 1em 2em;
+}
+
+.about__avatar {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about__name,
+.about__position {
+  margin: 0;
+}
+
+.about__name {
+  font-size: 1.6rem;
+  margin-top: 20px;
+}
+
+.about__position {
+  font-size: 1.375rem;
+  font-weight: 400;
 }

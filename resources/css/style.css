@@ -54,6 +54,12 @@ li {
   letter-spacing: 1px;
   background-color: white;
   color: black;
+  transition: transform 50ms;
+}
+
+.btn:hover {
+  transform: scale(1.01);
+  box-shadow: 1px 1px 2px rgb(65, 65, 65);
 }
 
 .btn--blue {
@@ -220,7 +226,7 @@ li {
 }
 
 .footer {
-  padding: 4em 0 2em;
+  padding: 4em 2em 2em;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -244,6 +250,14 @@ li {
   text-align: center;
 }
 
+.footer__biz-info p {
+  margin: 0;
+}
+
+.footer__logo {
+  max-width: 100px;
+}
+
 .footer__list {
   list-style-type: none;
   padding-left: 0;
@@ -257,4 +271,20 @@ li {
 .footer__link:hover,
 .footer__link:focus {
   text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer__col {
+    min-width: 200px;
+    max-width: 700px;
+    margin-bottom: 4em;
+  }
+
+  .footer__biz-info {
+    text-align: unset;
+  }
 }

@@ -58,6 +58,7 @@
 /****************************************/
 .setup {
   display: flex;
+  margin-bottom: 4em;
 }
 
 .setup__body {
@@ -172,9 +173,12 @@
 /****************************************/
 /*** Results ****************************/
 /****************************************/
+.results {
+  padding: 4em 0;
+}
+
 .results__two-cols {
   display: flex;
-  justify-content: baseline;
 }
 
 .results__col {

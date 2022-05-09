@@ -164,7 +164,7 @@
   height: 70vh;
   min-height: 600px;
   max-height: 800px;
-  max-width: var(--banner-width); /* from testimonials section */
+  max-width: var(--banner-width); /* from testimonials section below*/
   margin-inline: auto;
   /* background image lazy loaded from javascript */
   /* background-image: url(../images/laptop_squoosh.jpg); */
@@ -196,12 +196,63 @@
 /*** testimonials banner ****************/
 /****************************************/
 
-/*
-    banner width = (cardWidth + margins) * (numOfCards / 2)
-    e.g. banner width = (32 + 400 + 32) * (12 / 2)
+/* 
+    for testimonials banner to work:
+    - take the total number of testimonials and double it in the html (copy & paste)
+    - if that is not enough to full widescreen monitors, double that
+    - if that is not enough to full widescreen monitors, double that...
+    - THEN, follow equation below
+
+    DO:
+    - copy and past an even number of sets.
+
+        example:
+          testimonial 1
+          testimonial 2
+          testimonial 3
+          
+          testimonial 1
+          testimonial 2
+          testimonial 3
+
+          testimonial 1
+          testimonial 2
+          testimonial 3
+
+          testimonial 1
+          testimonial 2
+          testimonial 3
+
+    DON'T:
+    - copy and past an odd number of sets.
+
+        example (don't do this):
+          testimonial 1
+          testimonial 2
+          testimonial 3
+          
+          testimonial 1
+          testimonial 2
+          testimonial 3
+
+          testimonial 1
+          testimonial 2
+          testimonial 3
+
+
+    Equation:
+    banner width = (cardWidth + anyMargins + anyPadding) * (numOfCards / 2)
+     
+    Use browser development tools to find total width of .testimonials__card
+
+    example:
+        banner width = (564 + 64) * (12 / 2)
+    
 */
+
 :root {
-  --banner-width: 2784px;
+  /* equation result here */
+  --banner-width: 4512px;
   --card-height: 255px;
 }
 
@@ -229,7 +280,7 @@
 
 @media (min-width: 851px) {
   .slidebanner {
-    animation: bannermove 100s linear infinite;
+    animation: bannermove 60s linear infinite;
   }
 
   @keyframes bannermove {
@@ -385,6 +436,14 @@
 
   .fadeIn {
     opacity: 1;
+  }
+
+  .why__list {
+    padding-left: 0;
+  }
+
+  .why__list li {
+    list-style-type: none;
   }
 }
 

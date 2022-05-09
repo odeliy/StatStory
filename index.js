@@ -62,8 +62,6 @@ document.getElementById("case-studies-next").addEventListener("click", () => {
 /**********************************/
 /*** Fade In Bullets **************/
 /**********************************/
-
-/* entries is an array of objects */
 function addClass(entries) {
   entries.forEach((entry) => {
     /* gaurd against initial page load */

@@ -5,6 +5,7 @@
   --offwhite: #f7f6f9;
   --background-blue: #046ce0;
   --max-width: 1700px;
+  --black: #161616;
 }
 
 body {
@@ -38,6 +39,12 @@ input[type]:focus,
   outline: 0 none;
 }
 
+body,
+.nav__item,
+.btn {
+  color: var(--black);
+}
+
 /****************************************/
 /*** generic ****************************/
 /****************************************/
@@ -63,7 +70,6 @@ input[type]:focus,
   font-family: "Nunito", sans-serif;
   letter-spacing: 1px;
   background-color: white;
-  color: black;
   transition: transform 50ms;
 }
 
@@ -187,7 +193,7 @@ input[type]:focus,
 /*** free ads ***************************/
 /****************************************/
 .free-ads {
-  height: 500px;
+  height: 80vh;
   max-width: 380px;
   margin-inline: auto;
   margin-top: 4em;
@@ -232,14 +238,11 @@ input[type]:focus,
 /*** footer *****************************/
 /****************************************/
 .footer-frame {
-  /* this color is better, but don't have transparent logo */
-  /* background-color: #151519; */
-  background-color: black;
+  background-color: var(--black);
 }
 
 .footer {
   padding: 4em 2em 2em;
-  color: white;
   display: flex;
   justify-content: space-between;
 }

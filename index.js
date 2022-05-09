@@ -58,3 +58,49 @@ document.getElementById("case-studies-next").addEventListener("click", () => {
 
   slides[position].classList.add("visible");
 });
+
+/**********************************/
+/*** Fade In Bullets **************/
+/**********************************/
+
+/* entries is an array of objects */
+function addClass(entries) {
+  entries.forEach((entry) => {
+    /* gaurd against initial page load */
+    if (entry.isIntersecting === true) {
+      entry.target.classList.add("fadeIn");
+    }
+  });
+}
+
+const whyObserver = new IntersectionObserver(addClass, { threshold: [1] });
+whyObserver.observe(document.querySelector("#w1_1"));
+whyObserver.observe(document.querySelector("#w1_2"));
+whyObserver.observe(document.querySelector("#w1_3"));
+whyObserver.observe(document.querySelector("#w1_4"));
+whyObserver.observe(document.querySelector("#w1_5"));
+
+const why2Observer = new IntersectionObserver(addClass, { threshold: [0.5] });
+why2Observer.observe(document.querySelector("#w2_1"));
+why2Observer.observe(document.querySelector("#w2_2"));
+why2Observer.observe(document.querySelector("#w2_3"));
+why2Observer.observe(document.querySelector("#w2_4"));
+
+/**********************************/
+/*** Lazy Load Background Imgs ****/
+/**********************************/
+const backgroundImgObserver = new IntersectionObserver((entries) => {
+  if (entries[0].isIntersecting === true) {
+    entries[0].target.style.backgroundImage =
+      "url(./resources/images/laptop.png)";
+  }
+});
+backgroundImgObserver.observe(document.querySelector(".experts__outer"));
+
+const backgroundImg2Observer = new IntersectionObserver((entries) => {
+  if (entries[0].isIntersecting === true) {
+    entries[0].target.style.backgroundImage =
+      "url(./resources/images/work.png)";
+  }
+});
+backgroundImg2Observer.observe(document.querySelector(".success__ghost"));

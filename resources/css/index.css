@@ -166,7 +166,8 @@
   max-height: 800px;
   max-width: var(--banner-width); /* from testimonials section */
   margin-inline: auto;
-  background-image: url(../images/laptop.png);
+  /* background image lazy loaded from javascript */
+  /* background-image: url(../images/laptop_squoosh.jpg); */
   background-color: #9c9c9c;
   background-blend-mode: multiply;
   background-repeat: no-repeat;
@@ -370,8 +371,20 @@
 }
 
 @media (max-width: 850px) {
+  /* aka fade-element */
   .why__list li {
     margin-top: 1em;
+  }
+}
+
+@media (max-width: 500px) {
+  .fade-element {
+    opacity: 0;
+    transition: opacity 2s;
+  }
+
+  .fadeIn {
+    opacity: 1;
   }
 }
 
@@ -473,7 +486,9 @@
 
 .success__ghost {
   width: 50%;
-  background-image: url(../images/work.png);
+  /* background image lazy loaded from javascript */
+  /* background-image: url(../images/work_squoosh.jpg); */
+  background-color: #9c9c9c;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -564,7 +579,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .why2__title {
     text-align: unset;
   }
@@ -811,6 +826,7 @@
 /*** about us ***************************/
 /****************************************/
 .about {
+  padding-top: 4em;
   padding-bottom: 4em;
   text-align: center;
   display: flex;

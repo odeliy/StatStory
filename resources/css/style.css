@@ -28,6 +28,16 @@ li {
   line-height: 1.69;
 }
 
+textarea:focus,
+input:focus,
+input[type]:focus,
+.uneditable-input:focus {
+  border-color: rgba(229, 103, 23, 0.8);
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset,
+    0 0 8px rgba(229, 103, 23, 0.6);
+  outline: 0 none;
+}
+
 /****************************************/
 /*** generic ****************************/
 /****************************************/
@@ -222,6 +232,8 @@ li {
 /*** footer *****************************/
 /****************************************/
 .footer-frame {
+  /* this color is better, but don't have transparent logo */
+  /* background-color: #151519; */
   background-color: black;
 }
 
@@ -286,5 +298,6 @@ li {
 
   .footer__biz-info {
     text-align: unset;
+    order: 99;
   }
 }

@@ -65,41 +65,8 @@ const backgroundImg2Observer = new IntersectionObserver((entries) => {
 backgroundImg2Observer.observe(document.querySelector(".success__ghost"));
 
 /**********************************/
-/*** carousel *********************/
+/*** case studies carousel ********/
 /**********************************/
-// let position = 0;
-// const slides = document.getElementsByClassName("cstud__item");
-// const numOfSlides = slides.length;
-
-// function hideContent(content) {
-//   for (let item of content) {
-//     item.classList.remove("visible");
-//   }
-// }
-
-// document.getElementById("case-studies-prev").addEventListener("click", () => {
-//   hideContent(slides);
-
-//   if (position === 0) {
-//     position = numOfSlides - 1;
-//   } else {
-//     position--;
-//   }
-
-//   slides[position].classList.add("visible");
-// });
-
-// document.getElementById("case-studies-next").addEventListener("click", () => {
-//   hideContent(slides);
-
-//   if (position === numOfSlides - 1) {
-//     position = 0;
-//   } else {
-//     position++;
-//   }
-
-//   slides[position].classList.add("visible");
-// });
 let position = 0;
 const slides = [
   {
@@ -131,6 +98,24 @@ const slides = [
     viewsUp: "40%",
     leadsUp: "9X",
   },
+
+  /* 
+    adding new case studies to the carousel is easy.
+    simply add new objects like the format below.
+    replace <> tags with appopriate data.
+  */
+
+  /*****************************************************
+      {
+        id: <Unique Number>,
+        href: "./case-studies/<new-case-study.html>",
+        person: "<Full Name>",
+        occupation: "<Job Title>",
+        subsUp: "<New Percentage>",
+        viewsUp: "<New Percentage>",
+        leadsUp: "<New X Increase>",
+      },
+  *******************************************************/
 ];
 const numOfSlides = slides.length;
 

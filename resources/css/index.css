@@ -417,6 +417,10 @@
 }
 
 @media (max-width: 500px) {
+  .why {
+    margin-top: -150px;
+  }
+
   .why__list {
     padding-left: 0;
   }

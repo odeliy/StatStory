@@ -6,7 +6,8 @@
   margin-bottom: 16em;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  /* justify-content: space-evenly; */
 }
 
 .hero__body {
@@ -16,7 +17,7 @@
 }
 
 .hero__img {
-  width: 40%;
+  width: 50%;
 }
 
 .hero__title {
@@ -43,6 +44,7 @@
   .hero__body {
     width: 100%;
     max-width: 700px;
+    margin-right: 0;
   }
 
   .hero__title {
@@ -111,29 +113,23 @@
 /*** struggle ***************************/
 /****************************************/
 .struggle {
+  padding-block: 2em;
   display: flex;
   align-items: center;
-}
-
-.struggle__graphs {
-  width: 50%;
+  justify-content: space-between;
 }
 
 .struggle__img {
   width: 100%;
   max-width: 500px;
-  display: block;
-  margin-inline: auto;
 }
 
 .struggle__body {
   flex-shrink: 2;
-  max-width: 700px;
-  padding: 0 2em;
+  max-width: var(--readability-width);
 }
 
 .struggle__title {
-  width: 70%;
   margin-inline: auto;
 }
 
@@ -161,14 +157,14 @@
 /*** advertising experts ****************/
 /****************************************/
 .experts__outer {
-  height: 70vh;
-  min-height: 600px;
-  max-height: 800px;
+  min-height: 800px;
+  max-height: 1200px;
   max-width: var(--banner-width); /* from testimonials section below*/
   margin-inline: auto;
+  padding-top: 2em;
   /* background image lazy loaded from javascript */
   /* background-image: url(../images/laptop_squoosh.jpg); */
-  background-color: #9c9c9c;
+  background-color: #535353;
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: center;
@@ -182,7 +178,6 @@
 
 @media (max-width: 1500px) {
   .experts__outer {
-    background-color: #535353;
   }
 }
 
@@ -382,9 +377,9 @@
 /*** why ********************************/
 /****************************************/
 .why {
-  margin-top: -75px; /* wtf */
+  margin-top: -75px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .why__ghost {
@@ -393,12 +388,8 @@
 }
 
 .why__body {
-  max-width: 785px;
+  max-width: var(--readability-width);
   margin-left: 5em;
-}
-
-.why__title {
-  text-align: center;
 }
 
 .why__list {
@@ -452,29 +443,26 @@
 /****************************************/
 .who {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .who__img-frame {
   width: 420px;
+  margin-inline: auto;
   flex-shrink: 0;
   position: relative;
 }
 
 .who__img {
   position: absolute;
-  transform: translateY(-55%);
+  transform: translateY(-60%);
   width: 100%;
 }
 
 .who__body {
-  max-width: 785px;
+  max-width: var(--readability-width);
   margin-left: 5em;
   padding: 4em 0 6em;
-}
-
-.who__title {
-  text-align: center;
 }
 
 @media (max-width: 1000px) {
@@ -493,22 +481,22 @@
 .exposure {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .exposure__body {
   width: 50%;
-  max-width: 700px;
+  max-width: var(--readability-width);
   padding-right: 2em;
 }
 
 .exposure__img-frame {
+  max-width: 500px;
   width: 40%;
 }
 
 .exposure__img {
   width: 100%;
-  max-width: 420px;
   display: block;
   margin-inline: auto;
 }
@@ -537,42 +525,55 @@
 /****************************************/
 /*** measuring success ******************/
 /****************************************/
+
 .success {
-  margin-inline: auto;
-  margin-bottom: 100px;
   display: flex;
 }
 
 .success__ghost {
   width: 50%;
+  flex-shrink: 0;
   /* background image lazy loaded from javascript */
   /* background-image: url(../images/work_squoosh.jpg); */
-  background-color: #9c9c9c;
+  background-color: #535353;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .success__body {
-  width: 30%;
-  max-width: 750px;
-  padding: 4em 0;
-  padding-left: 6em;
+  width: 50%;
+  flex-shrink: 0;
+  padding-top: 6em;
+  padding-bottom: 6em;
 }
 
-@media (max-width: 850px) {
+.success__content {
+  max-width: calc(var(--readability-width) - 8em);
+  padding-left: 6em;
+  padding-right: 2em;
+}
+
+.success__title {
+  margin-top: 0;
+}
+
+@media (max-width: 1000px) {
   .success {
     flex-direction: column;
   }
 
   .success__ghost {
     width: 100%;
-    height: 30vh;
+    min-height: 40vh;
   }
 
   .success__body {
-    padding: 4em 2em;
-    width: unset;
+    width: 100%;
+  }
+
+  .success__content {
+    padding-left: 2em;
   }
 }
 
@@ -587,14 +588,12 @@
 
 .why2__body {
   width: 50%;
-  max-width: 800px;
+  max-width: var(--readability-width);
   padding-right: 2em;
 }
 
 .why2__title {
-  width: 70%;
   margin-inline: auto;
-  text-align: center;
 }
 
 .why2__list li {
@@ -603,6 +602,7 @@
 
 .why2__body2 {
   width: 50%;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -617,7 +617,7 @@
   margin-top: 4em;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
   .why2 {
     flex-direction: column;
   }
@@ -634,7 +634,7 @@
 
   .why2__body2 {
     width: 80%;
-    margin-top: 2em;
+    margin-top: 4em;
   }
 }
 
@@ -705,6 +705,14 @@
   font-size: 3rem;
   color: white;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+:root {
+  --hacky-offset: -90px;
+}
+.cstud__title,
+.cstud__btn {
+  margin-left: var(--hacky-offset);
 }
 
 /******** CAROUSEL *********/

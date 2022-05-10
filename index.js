@@ -118,7 +118,6 @@ const slides = [
   *******************************************************/
 ];
 const numOfSlides = slides.length;
-
 const carousel = document.getElementById("carousel");
 
 function renderHtml() {

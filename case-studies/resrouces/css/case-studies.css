@@ -63,7 +63,7 @@
 .setup {
   display: flex;
   padding-top: 4em;
-  margin-bottom: 4em;
+  margin-bottom: 8em;
 }
 
 .setup__body {
@@ -184,7 +184,7 @@
 /****************************************/
 .results {
   padding-top: 2em;
-  padding-bottom: 4em;
+  padding-bottom: 8em;
 }
 
 .results__two-cols {

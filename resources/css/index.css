@@ -745,8 +745,8 @@
 }
 
 .cstud__item {
-  flex-shrink: 0;
   display: none;
+  flex-shrink: 0;
   position: relative;
   height: 600px;
   width: 300px;
@@ -755,11 +755,10 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  /* safari fix: 1ms delay on animation */
-  animation: fadeIn 1s ease-in-out 0.0001s;
+  animation: slideIn 1s ease-out 1ms;
 }
 
-@keyframes fadeIn {
+@keyframes slideIn {
   0% {
     opacity: 0;
     transform: translateX(50%);
@@ -771,7 +770,6 @@
   }
 }
 
-/* applied by js on carousel cstud__items */
 .visible {
   display: initial;
 }

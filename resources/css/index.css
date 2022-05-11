@@ -429,11 +429,16 @@
   }
 
   .why__img-frame {
+<<<<<<< HEAD
     width: unset;
     max-width: 500px;
     flex-shrink: 1;
     position: unset;
     margin-bottom: 2em;
+=======
+    flex-shrink: 1;
+    position: unset;
+>>>>>>> 6a1f5f163fb56cc4e0d1820d021f2282e05d702b
   }
 
   .why__body {
@@ -444,6 +449,10 @@
 @media (max-width: 500px) {
   .why {
     margin-top: -150px;
+  }
+
+  .why__img-frame {
+    max-width: 500px;
   }
 
   .why__list {

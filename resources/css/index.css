@@ -2,7 +2,7 @@
 /*** hero *******************************/
 /****************************************/
 .hero {
-  margin-top: 8em;
+  margin-top: 4em;
   margin-bottom: 16em;
   display: flex;
   align-items: center;
@@ -113,7 +113,7 @@
 /*** struggle ***************************/
 /****************************************/
 .struggle {
-  padding-block: 2em;
+  padding-top: 2em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -121,10 +121,11 @@
 
 .struggle__img {
   width: 100%;
-  max-width: 500px;
+  max-width: var(--img-max-width);
 }
 
 .struggle__body {
+  margin-left: 5em;
   flex-shrink: 2;
   max-width: var(--readability-width);
 }
@@ -135,17 +136,17 @@
 
 .struggle__btn {
   display: block;
-  margin-inline: auto;
   margin-top: 2em;
 }
 
 @media (max-width: 850px) {
-  .struggle__graphs {
-    display: none;
+  .struggle {
+    flex-direction: column;
   }
 
   .struggle__body {
     padding: 0;
+    margin-left: unset;
   }
 
   .struggle__title {
@@ -376,6 +377,7 @@
 /****************************************/
 /*** why ********************************/
 /****************************************/
+
 .why {
   margin-top: -75px;
   display: flex;
@@ -383,7 +385,7 @@
 }
 
 .why__ghost {
-  width: 420px;
+  width: var(--img-max-width);
   flex-shrink: 0;
 }
 
@@ -401,9 +403,8 @@
 }
 
 .why__btn {
-  margin-top: 4em;
+  margin-top: 2em;
   display: block;
-  margin-inline: auto;
 }
 
 @media (max-width: 1000px) {
@@ -449,8 +450,7 @@
 }
 
 .who__img-frame {
-  width: 420px;
-  margin-inline: auto;
+  width: var(--img-max-width);
   flex-shrink: 0;
   position: relative;
 }

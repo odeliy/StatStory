@@ -32,6 +32,7 @@ function addClass(entries) {
   });
 }
 
+/* bullet points first set */
 const whyObserver = new IntersectionObserver(addClass, { threshold: [1] });
 whyObserver.observe(document.querySelector("#w1_1"));
 whyObserver.observe(document.querySelector("#w1_2"));
@@ -39,11 +40,59 @@ whyObserver.observe(document.querySelector("#w1_3"));
 whyObserver.observe(document.querySelector("#w1_4"));
 whyObserver.observe(document.querySelector("#w1_5"));
 
+/* bullet points second set */
 const why2Observer = new IntersectionObserver(addClass, { threshold: [0.5] });
 why2Observer.observe(document.querySelector("#w2_1"));
 why2Observer.observe(document.querySelector("#w2_2"));
 why2Observer.observe(document.querySelector("#w2_3"));
 why2Observer.observe(document.querySelector("#w2_4"));
+
+/* struggle */
+const struggleObserver = new IntersectionObserver(addClass, {
+  threshold: [0.25],
+});
+struggleObserver.observe(document.querySelector("#struggleObserver"));
+
+/* experts */
+const expertsObserver = new IntersectionObserver(addClass, {
+  threshold: [0.25],
+});
+expertsObserver.observe(document.querySelector("#expertsObserver"));
+
+/* why youtube ads? */
+const whyTitleObserver = new IntersectionObserver(addClass, {
+  threshold: [0.25],
+});
+whyTitleObserver.observe(document.querySelector("#whyTitleObserver"));
+
+const whyBtnObserver = new IntersectionObserver(addClass, {
+  threshold: [0.25],
+});
+whyBtnObserver.observe(document.querySelector("#whyBtnObserver"));
+
+/* who is? */
+const whoObserver = new IntersectionObserver(addClass, {
+  threshold: [0.25],
+});
+whoObserver.observe(document.querySelector("#whoObserver"));
+
+/* maximize exposure */
+const maximizeObserver = new IntersectionObserver(addClass, {
+  threshold: [0.25],
+});
+maximizeObserver.observe(document.querySelector("#maximizeObserver"));
+
+/* measure success */
+const measureObserver = new IntersectionObserver(addClass, {
+  threshold: [0.25],
+});
+measureObserver.observe(document.querySelector("#measureObserver"));
+
+/* why work with? */
+const why2TitleObserver = new IntersectionObserver(addClass, {
+  threshold: [0.25],
+});
+why2TitleObserver.observe(document.querySelector("#why2TitleObserver"));
 
 /**********************************/
 /*** Lazy Load Background Imgs ****/

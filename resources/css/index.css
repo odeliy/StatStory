@@ -32,7 +32,17 @@
   line-height: 1.5;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1180px) and (min-width: 1041px) {
+  .hero__title {
+    font-size: 3.25rem;
+  }
+
+  .hero__desc {
+    font-size: 1.375rem;
+  }
+}
+
+@media (max-width: 1040px) {
   .hero {
     flex-direction: column;
     margin-top: 2em;
@@ -138,7 +148,7 @@
   margin-top: 2em;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1040px) {
   .struggle {
     flex-direction: column;
   }
@@ -182,6 +192,12 @@
 @media (max-width: 600px) {
   .experts__outer {
     min-height: 800px;
+  }
+}
+
+@media (max-width: 372px) {
+  .experts__outer {
+    min-height: 900px;
   }
 }
 
@@ -407,9 +423,13 @@
   display: block;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1450px) {
   .why {
     align-items: center;
+  }
+
+  .why__img-frame {
+    max-width: 300px;
   }
 
   .why__img {
@@ -417,7 +437,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .why {
     flex-direction: column;
     align-items: center;
@@ -465,7 +485,6 @@
 
 .who__ghost {
   width: var(--img-max-width);
-  flex-shrink: 0;
 }
 
 .who__body {
@@ -474,15 +493,13 @@
   padding: 4em 0 6em;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1450px) {
   .who__ghost {
     display: none;
   }
-}
 
-@media (max-width: 1000px) {
   .who__body {
-    margin-left: unset;
+    margin-left: 0;
   }
 }
 
@@ -496,9 +513,8 @@
 }
 
 .exposure__body {
-  width: 50%;
   max-width: var(--readability-width);
-  padding-right: 2em;
+  padding-right: 4em;
 }
 
 .exposure__btn {
@@ -507,6 +523,7 @@
 
 .exposure__img-frame {
   max-width: var(--img-max-width);
+  flex-shrink: 0.5;
 }
 
 .exposure__img {
@@ -515,7 +532,7 @@
   margin-inline: auto;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1040px) {
   .exposure {
     flex-direction: column;
   }
@@ -587,7 +604,22 @@
   }
 
   .success__content {
+    margin-inline: auto;
+    padding-right: 6em;
+  }
+}
+
+@media (max-width: 850px) {
+  .success__content {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+}
+
+@media (max-width: 500px) {
+  .success__content {
     padding-left: 2em;
+    padding-right: 2em;
   }
 }
 
@@ -630,7 +662,7 @@
   margin-top: 4em;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1380px) {
   .why2 {
     flex-direction: column;
   }

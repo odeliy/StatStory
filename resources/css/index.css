@@ -7,7 +7,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* justify-content: space-evenly; */
 }
 
 .hero__body {
@@ -164,7 +163,6 @@
   margin-inline: auto;
   padding-top: 2em;
   /* background image lazy loaded from javascript */
-  /* background-image: url(../images/laptop_squoosh.jpg); */
   background-color: #535353;
   background-blend-mode: multiply;
   background-repeat: no-repeat;
@@ -175,11 +173,6 @@
 .experts__body {
   max-width: 500px;
   padding-top: 4em;
-}
-
-@media (max-width: 1500px) {
-  .experts__outer {
-  }
 }
 
 @media (max-width: 600px) {
@@ -195,14 +188,13 @@
 /* 
     for testimonials banner to work:
     - take the total number of testimonials and double it in the html (copy & paste)
-    - if that is not enough to full widescreen monitors, double that
-    - if that is not enough to full widescreen monitors, double that...
+    - if that is not enough to fill widescreen monitors, double that
+    - if that is not enough to fill widescreen monitors, double that...
     - THEN, follow equation below
 
     DO:
     - copy and past an even number of sets.
 
-        example:
           testimonial 1
           testimonial 2
           testimonial 3
@@ -222,7 +214,6 @@
     DON'T:
     - copy and past an odd number of sets.
 
-        example (don't do this):
           testimonial 1
           testimonial 2
           testimonial 3
@@ -554,7 +545,6 @@
   width: 50%;
   flex-shrink: 0;
   /* background image lazy loaded from javascript */
-  /* background-image: url(../images/work_squoosh.jpg); */
   background-color: #535353;
   background-repeat: no-repeat;
   background-position: center;

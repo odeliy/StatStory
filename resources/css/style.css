@@ -2,12 +2,12 @@
 /*** globals ****************************/
 /****************************************/
 :root {
-  --offwhite: #f7f6f9;
-  --background-blue: #0079ff;
   --max-width: 1300px;
   --readability-width: 650px;
   --img-max-width: 520px;
   --black: #161616;
+  --offwhite: #f7f6f9;
+  --background-blue: #0079ff;
 }
 
 body {
@@ -99,7 +99,6 @@ body,
 }
 
 .blue-body-background {
-  /* background-image: linear-gradient(-255deg, #244aa3, #046ce0); */
   background-image: linear-gradient(to right, #0065d5, #0079ff);
   background-color: var(--background-blue);
   width: 100%;

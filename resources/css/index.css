@@ -143,6 +143,10 @@
     flex-direction: column;
   }
 
+  .struggle__graphs {
+    margin: 2em 0;
+  }
+
   .struggle__body {
     padding: 0;
     margin-left: unset;

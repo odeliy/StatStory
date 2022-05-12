@@ -547,11 +547,10 @@
 
 .success {
   display: flex;
+  min-height: 580px;
 }
 
 .success__ghost {
-  height: 60vh;
-  max-height: 600px;
   width: 50%;
   flex-shrink: 0;
   /* background image lazy loaded from javascript */
